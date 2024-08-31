@@ -6,4 +6,5 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   integrations: [tailwind(), icon()],
   site: "https://risk1996.github.io",
+  base: "curriculum-vitae",
 });
