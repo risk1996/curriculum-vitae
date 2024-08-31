@@ -1,5 +1,13 @@
 {
-  "cSpell.words": ["astrojs", "biomejs", "treehouse", "tsconfigs"],
+  "cSpell.words": [
+    "astrojs",
+    "biomejs",
+    "fontsource",
+    "iconify",
+    "tabler",
+    "treehouse",
+    "tsconfigs"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
@@ -18,5 +26,18 @@
     "source.organizeImports.biome": "explicit"
   },
   "editor.defaultFormatter": "biomejs.biome",
-  "discord.enabled": true
+  "discord.enabled": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/node_modules": true
+  }
 }
