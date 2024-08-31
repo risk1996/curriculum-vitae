@@ -1,6 +1,19 @@
 {
-  "cSpell.words": [
-    "astrojs",
-    "tsconfigs"
-  ]
+  "cSpell.words": ["astrojs", "biomejs", "tsconfigs"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.defaultFormatter": "biomejs.biome",
+  "discord.enabled": true
 }
