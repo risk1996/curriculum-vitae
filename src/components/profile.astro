@@ -4,6 +4,10 @@ import { Picture } from "astro:assets";
 import { twMerge } from "tailwind-merge";
 
 import PortraitImage from "../../public/portrait.png";
+
+interface Props {
+  class?: string;
+}
 ---
 
 <section class={twMerge("flex flex-col", Astro.props.class)}>
