@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["astrojs", "biomejs", "tsconfigs"],
+  "cSpell.words": ["astrojs", "biomejs", "treehouse", "tsconfigs"],
   "[javascript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
