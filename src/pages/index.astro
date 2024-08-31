@@ -1,19 +1,21 @@
 ---
 import Bio from "../components/bio.astro";
 import Heading from "../components/heading.astro";
+import Profile from "../components/profile.astro";
 import Ribbon from "../components/ribbon.astro";
 import Layout from "../layout.astro";
 ---
 
 <Layout title="Astro">
   <div
-    class="grid-cols-[repeat(12, fit-content(calc(100% / 12)))] grid-rows-[repeat(12, fit-content(calc(100% / 12)))] grid gap-2"
+    class="grid-rows-[repeat(12, fit-content(calc(100% / 12)))] grid grid-cols-12 gap-4"
   >
     <div class="col-span-8 flex flex-row self-start">
       <Ribbon class="-mt-10 w-12" />
       <Heading class="flex-grow pl-4" />
     </div>
 
+    <Profile class="col-span-4 row-span-2 -mt-10" />
     <Bio class="col-span-8 row-start-2" />
   </div>
 </Layout>
