@@ -1,5 +1,8 @@
 {
   "cSpell.words": ["astrojs", "biomejs", "tsconfigs"],
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
