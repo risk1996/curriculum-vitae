@@ -1,6 +1,7 @@
 ---
 import { twMerge } from "tailwind-merge";
-import PersonalDevelopmentItem from "./personal-development-item.astro";
+import HistoryItem from "./hisotry-item.astro";
+import HistorySection from "./history-section.astro";
 
 interface Props {
   class?: string;
@@ -8,67 +9,65 @@ interface Props {
 ---
 
 <section class={twMerge("flex flex-col gap-6", Astro.props.class)}>
-  <div class="mb-4 flex flex-col gap-4">
-    <h3 class="text-2xl font-semibold uppercase">Education</h3>
-    <PersonalDevelopmentItem
+  <HistorySection class="mb-4 flex flex-col gap-4" legend="Education">
+    <HistoryItem
       name="Yoshida Institute of Japanese Language"
       desc="Apr 2024 – Present | N2 Language Course"
       info="Current Class: Task-based Learning"
     />
-    <PersonalDevelopmentItem
+    <HistoryItem
       name="Universitas Multimedia Nusantara"
       desc="Aug 2015 – Dec 2019 | Computer Engineering Bachelor"
       info="Best graduate at Graduation XVI, summa cum laude (GPA 3.96)"
     />
-  </div>
+  </HistorySection>
 
-  <div class="mb-4 flex flex-col gap-4">
-    <h3 class="text-2xl font-semibold uppercase">
-      Qualifictions & Achievements
-    </h3>
-    <PersonalDevelopmentItem
+  <HistorySection
+    class="mb-4 flex flex-col gap-4"
+    legend="Qualifictions & Achievements"
+  >
+    <HistoryItem
       name="Japanese Language Proficiency Test (N3)"
       desc="Jun 2024 | Language Certification"
       info="Registration No.: 133433094"
     />
-    <PersonalDevelopmentItem
+    <HistoryItem
       name="Red Hat Certified System Administrator v8"
       desc="Jul 2019 | Red Hat, Inc. System Administration  Certification"
       info="Certification ID: 190-181-198"
     />
-    <PersonalDevelopmentItem
+    <HistoryItem
       name="Huawei Certified Network Associate"
       desc="Sep 2018 | HAINA Networking Certification"
       info="Test No: H12-211"
     />
-    <PersonalDevelopmentItem
-      name="XL Business Solution IoT Hackathon Winner"
-      desc="Sep 2018 | National Competition | 3rd Place"
-      info="Prize: 2.500.000 IDR"
-    />
-    <PersonalDevelopmentItem
+    <HistoryItem
       name="Huawei Routing & Switching Competition Winner"
       desc="Dec 2018 | Local Competition | 1st Place"
       info="Prize: Trip to Huawei HQ at Shenzhen, China"
     />
-    <PersonalDevelopmentItem
+    <HistoryItem
+      name="XL Business Solution IoT Hackathon Winner"
+      desc="Sep 2018 | National Competition | 3rd Place"
+      info="Prize: 2.500.000 IDR"
+    />
+    <HistoryItem
       name="Study Visit Participant to RFH Köln, Germany"
       desc="Apr 2019 | Study Visits by Groups of Foreign Students, by DAAD"
       info="Prize: 12-day trip to Köln"
     />
-  </div>
+  </HistorySection>
 
-  <div class="mb-4 flex flex-col gap-4">
-    <h3 class="text-2xl font-semibold uppercase">Work Experience</h3>
-    <PersonalDevelopmentItem
+  <HistorySection class="mb-4 flex flex-col gap-4" legend="Work Experience">
+    <HistoryItem
       name="Principal Software Engineer"
       desc="Aug 2019 – Mar 2023 | PT Dwi Cermat Indonesia (Cermati.com)"
       info="Working on digitization of financial services and super-app enabler for banks"
     />
-    <PersonalDevelopmentItem
+    <HistoryItem
       name="Full Stack Web Developer Intern"
       desc="Jul 2018 – Jan 2019 | Frisidea Tech"
       info="Developing dormitory managemenet system with Laravel"
     />
-  </div>
+  </HistorySection>
 </section>

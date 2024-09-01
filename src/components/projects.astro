@@ -1,0 +1,71 @@
+---
+import { twMerge } from "tailwind-merge";
+import HistoryItem from "./hisotry-item.astro";
+import HistorySection from "./history-section.astro";
+---
+
+<section class={twMerge("flex flex-col gap-6", Astro.props.class)}>
+  <HistorySection class="mb-4 flex flex-col gap-4" legend="Work Projects">
+    <HistoryItem
+      name="BCA Lifestyle: Movie Vertical"
+      desc="Nov 2019 – Apr 2020"
+    >
+      <p class="pb-2 text-justify text-sm text-tapa-500">
+        I developed the front-end web interface and integrated the movie ticket
+        vertical, using popular JavaScript libraries such as ReactJS, Redux
+        (with Redux Thunk middleware), React I18n, React Router, Axios, and
+        Webpack. The app communicates with the underlying service through REST
+        APIs.
+      </p>
+      <p class="pb-2 text-justify indent-4 text-sm text-tapa-500">
+        Within the app, users can buy movie tickets online in a few easy steps.
+        Users browse the movie they want to watch and select the cinema
+        location, the showtime, and the seat location. Then the user will see a
+        checkout page showing the purchase details. The payment process will ask
+        the users for their PIN and the amount will be deducted directly from
+        the bank account balance. The movie tickets can be redeemed at the
+        cinema using the code shown on the app.
+      </p>
+      <p class="pb-2 text-justify indent-4 text-sm text-tapa-500">
+        The movie ticket vertical integration takes about six months. I worked
+        with a front-end team that consisted of three people: a senior software
+        engineer and two other software engineers. I communicated with the
+        product managers, UI/UX staff, and quality assurance team members to
+        ensure my deliverables fulfilled the requirements.
+      </p>
+    </HistoryItem>
+
+    <HistoryItem name="blu by BCA Digital" desc="Feb 2020 – Apr 2024">
+      <p class="pb-2 text-justify text-sm text-tapa-500">
+        I spearheaded a cross-platform mobile application that enables our bank
+        partner, BCA Digital, to provide comprehensive and complete digital
+        banking services. Traditionally, banking requires on-site visits to
+        banking establishments to open a bank account and do large transactions.
+        The services eliminate this friction for our customers. Some financial
+        services offered includes shared savings accounts, time deposit
+        accounts, transfers, bill payments, and e-money top-ups.
+      </p>
+      <p class="pb-2 text-justify indent-4 text-sm text-tapa-500">
+        Early in the development cycle, I was in charge of some of the earliest
+        modules in the application, such as customer registration, multi-factor
+        authentication, and online transfer. I also work on the application's
+        reward system, video call integration for the KYC process, and
+        application interface redesign.
+      </p>
+      <p class="pb-2 text-justify indent-4 text-sm text-tapa-500">
+        The application utilizes the React Native framework, Redux (with Redux
+        Saga middleware), a custom HTTP client that enables SSL Pinning, React
+        I18n, React Navigation, React Hook Form, and extensive use of CSS-in-JS
+        library using Styled System. The majority of the code is written in
+        TypeScript for type safety. A smaller portion of native mobile code is
+        written in Java on Android and Objective-C/Swift on iOS to interface
+        directly with third-party native SDK.
+      </p>
+      <p class="pb-2 text-justify indent-4 text-sm text-tapa-500">
+        The application is available for download through the Google Play Store
+        and Apple App Store. The application has seen substantial user adoption
+        and satisfaction, and the trend will likely continue.
+      </p>
+    </HistoryItem>
+  </HistorySection>
+</section>

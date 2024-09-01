@@ -12,7 +12,10 @@ interface Props {
   <p class="text-base text-tapa-600">
     {Astro.props.desc}
   </p>
-  <p class="text-sm text-tapa-500">
-    {Astro.props.info}
-  </p>
+  {
+    Astro.props.info ? (
+      <p class="text-sm text-tapa-500">{Astro.props.info}</p>
+    ) : null
+  }
+  <slot />
 </div>

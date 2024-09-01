@@ -11,7 +11,7 @@ interface Props {
 ---
 
 <section class={twMerge("flex flex-col", Astro.props.class)}>
-  <div class="flex-grow-0 bg-treehouse-200">
+  <div class="-mt-6 flex-grow-0 bg-treehouse-200">
     <Picture
       src={PortraitImage}
       alt="Portrait picture of William Darian"
@@ -22,7 +22,7 @@ interface Props {
     <div class="flex gap-2">
       <Icon name="tabler:mail" class="flex-shrink-0" size={32} />
       <div>
-        <h3 class="text-xl font-bold">E-Mail</h3>
+        <h3 class="text-lg font-bold">E-Mail</h3>
         <a
           href="mailto:williamdariansutedjo@gmail.com"
           class="text-sm font-light underline print:no-underline"
@@ -31,11 +31,10 @@ interface Props {
         </a>
       </div>
     </div>
-    <hr class="border-t-2 text-tapa-700" />
     <div class="flex gap-2">
       <Icon name="tabler:phone" class="flex-shrink-0" size={32} />
       <div>
-        <h3 class="text-xl font-bold">Phone</h3>
+        <h3 class="text-lg font-bold">Phone</h3>
         <a
           href="tel:+818021423440"
           class="text-sm font-light underline print:no-underline"
@@ -44,11 +43,10 @@ interface Props {
         </a>
       </div>
     </div>
-    <hr class="border-t-2 text-tapa-700" />
     <div class="flex gap-2">
       <Icon name="tabler:brand-whatsapp" class="flex-shrink-0" size={32} />
       <div>
-        <h3 class="text-xl font-bold">WhatsApp</h3>
+        <h3 class="text-lg font-bold">WhatsApp</h3>
         <a
           href="https://wa.me/6282110778832"
           class="text-sm font-light underline print:no-underline"
@@ -57,11 +55,10 @@ interface Props {
         </a>
       </div>
     </div>
-    <hr class="border-t-2 text-tapa-700" />
     <div class="flex gap-2">
       <Icon name="tabler:home" class="flex-shrink-0" size={32} />
       <div>
-        <h3 class="text-xl font-bold">Address</h3>
+        <h3 class="text-lg font-bold">Address</h3>
         <a
           href="https://maps.app.goo.gl/BS5bjCqPCyCLWvQd6"
           class="text-sm font-light underline print:no-underline"
@@ -69,6 +66,25 @@ interface Props {
           <address>1-51-3 Higashi Nakano Nakano-ku, Tokyo-to 164-0003</address>
         </a>
       </div>
+    </div>
+    <hr class="border-t-2 text-tapa-700" />
+
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-github" size={20} />
+      <a
+        href="https://github.com/risk1996"
+        class="text-sm font-light underline print:no-underline"
+      >
+        risk1996
+      </a>
+      <span class="font-bold text-tapa-700"> | </span>
+      <Icon name="tabler:brand-linkedin" size={20} />
+      <a
+        href="https://www.linkedin.com/in/william-darian-sutedjo/"
+        class="text-sm font-light underline print:no-underline"
+      >
+        william-darian-sutedjo
+      </a>
     </div>
   </div>
 </section>

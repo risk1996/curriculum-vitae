@@ -1,0 +1,14 @@
+---
+interface Props {
+  class?: string;
+  legend: string;
+}
+---
+
+<div class={Astro.props.class}>
+  <div>
+    <h3 class="text-2xl font-semibold uppercase">{Astro.props.legend}</h3>
+    <hr class="w-12 border-t-2 border-tapa-500" />
+  </div>
+  <slot />
+</div>
