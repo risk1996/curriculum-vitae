@@ -12,7 +12,11 @@ interface Props {
 
 <section class={twMerge("flex flex-col", Astro.props.class)}>
   <div class="flex-grow-0 bg-treehouse-200">
-    <Picture src={PortraitImage} alt="Portrait picture of William Darian" />
+    <Picture
+      src={PortraitImage}
+      alt="Portrait picture of William Darian"
+      pictureAttributes={{ class: "saturate-50" }}
+    />
   </div>
   <div class="flex flex-col gap-4 bg-treehouse-950 p-4 text-tapa-50">
     <div class="flex gap-2">

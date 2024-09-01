@@ -1,0 +1,124 @@
+---
+import { Icon } from "astro-icon/components";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  class?: string;
+}
+---
+
+<aside class={twMerge("flex flex-col gap-4", Astro.props.class)}>
+  <div class="flex flex-col gap-2 pb-4">
+    <div class="flex items-center gap-10 pb-2">
+      <h3 class="text-2xl font-bold uppercase">Skills</h3>
+      <hr class="w-full" />
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-typescript" size={20} />
+      <span class="text-sm">TypeScript & JavaScript</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-nextjs" size={20} />
+      <span class="text-sm">NextJS, React, React Native</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-solidjs" size={20} />
+      <span class="text-sm">SolidStart & SolidJS</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-nodejs" size={20} />
+      <span class="text-sm">tRPC, ExpressJS, Fastify, Elysia</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-html5" size={20} />
+      <span class="text-sm">HTML & CSS</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:code-dots" size={20} />
+      <span class="text-sm">RESTful API & GraphQL</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-git" size={20} />
+      <span class="text-sm">Git</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-redhat" size={20} />
+      <span class="text-sm">RedHat, CentOS, Ubuntu</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-kotlin" size={20} />
+      <span class="text-sm">Kotlin & Java</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:leaf" size={20} />
+      <span class="text-sm">Spring Framework & Spring Boot</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:database" size={20} />
+      <span class="text-sm">PostgreSQL & SQLite</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-rust" size={20} />
+      <span class="text-sm">Rust</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-android" size={20} />
+      <span class="text-sm">Android</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:brand-apple" size={20} />
+      <span class="text-sm">iOS</span>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-2 pb-4">
+    <div class="flex items-center gap-10 pb-2">
+      <h3 class="text-2xl font-bold uppercase">Interests</h3>
+      <hr class="w-full" />
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:cpu" size={20} />
+      <span class="text-sm">Computer Science</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:lock" size={20} />
+      <span class="text-sm">Computer Security</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:math-function" size={20} />
+      <span class="text-sm">Mathematics</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:world" size={20} />
+      <span class="text-sm">Web Development</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:currency-ethereum" size={20} />
+      <span class="text-sm">Blockchain & Smart Contracts</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:device-mobile" size={20} />
+      <span class="text-sm">Mobile Development</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:app-window" size={20} />
+      <span class="text-sm">User Interface & User Experience</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:smart-home" size={20} />
+      <span class="text-sm">Internet of Things (IoT)</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:wifi" size={20} />
+      <span class="text-sm">Computer Networks</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:settings-automation" size={20} />
+      <span class="text-sm">Automation</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <Icon name="tabler:flask-2" size={20} />
+      <span class="text-sm">Chemistry</span>
+    </div>
+  </div>
+</aside>

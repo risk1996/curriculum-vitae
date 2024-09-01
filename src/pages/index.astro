@@ -3,6 +3,7 @@ import Bio from "../components/bio.astro";
 import Heading from "../components/heading.astro";
 import Profile from "../components/profile.astro";
 import Ribbon from "../components/ribbon.astro";
+import Sidebar from "../components/sidebar.astro";
 import Layout from "../layout.astro";
 ---
 
@@ -17,6 +18,9 @@ import Layout from "../layout.astro";
       <Bio class="pt-8" />
     </div>
 
-    <Profile class="col-span-4 -mt-10" />
+    <div class="col-span-4">
+      <Profile class="-mt-10" />
+      <Sidebar class="mt-8" />
+    </div>
   </div>
 </Layout>
