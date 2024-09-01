@@ -1,6 +1,7 @@
 ---
 import Bio from "../components/bio.astro";
 import Heading from "../components/heading.astro";
+import PersonalDevelopment from "../components/personal-development.astro";
 import Profile from "../components/profile.astro";
 import Ribbon from "../components/ribbon.astro";
 import Sidebar from "../components/sidebar.astro";
@@ -8,7 +9,7 @@ import Layout from "../layout.astro";
 ---
 
 <Layout title="William Darian's Curriculum Vitae">
-  <div class="grid grid-cols-12 gap-4">
+  <div class="grid max-w-screen-lg grid-cols-12 gap-4 self-center">
     <div class="col-span-8">
       <div class="flex flex-row self-start">
         <Ribbon class="-mt-10 w-12" />
@@ -16,6 +17,8 @@ import Layout from "../layout.astro";
       </div>
 
       <Bio class="pt-8" />
+      <hr class="border-tapa-600" />
+      <PersonalDevelopment class="pt-8" />
     </div>
 
     <div class="col-span-4">
