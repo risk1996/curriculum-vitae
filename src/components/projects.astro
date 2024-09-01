@@ -1,7 +1,39 @@
 ---
+import { Picture } from "astro:assets";
 import { twMerge } from "tailwind-merge";
+
+import Carousel from "./carousel.astro";
 import HistoryItem from "./hisotry-item.astro";
 import HistorySection from "./history-section.astro";
+import Slide from "./slide.astro";
+
+import BLU01Image from "../../public/blu/01-landing.jpeg";
+import BLU02Image from "../../public/blu/02-prelogin.jpeg";
+import BLU03Image from "../../public/blu/03-home.jpeg";
+import BLU04Image from "../../public/blu/04-transaction-sheet.jpeg";
+import BLU05Image from "../../public/blu/05-transfer-destination-list.jpeg";
+import BLU06Image from "../../public/blu/06-transfer-detail.jpeg";
+import BLU07Image from "../../public/blu/07-flazz-nfc-scan.jpeg";
+import BLU08Image from "../../public/blu/08-gift-card-design.jpeg";
+import BLU09Image from "../../public/blu/09-subaccount-creation.jpeg";
+import BLU10Image from "../../public/blu/10-settings.jpeg";
+import BLU11Image from "../../public/blu/11-profile.jpeg";
+import BLU12Image from "../../public/blu/12-update-address.jpeg";
+import BLU13Image from "../../public/blu/13-referral.jpeg";
+import BLU14Image from "../../public/blu/14-proxy-address.jpeg";
+import BLU15Image from "../../public/blu/15-biometrics.jpeg";
+import BLU16Image from "../../public/blu/16-tracker-and-history.jpeg";
+import BLU17Image from "../../public/blu/17-promotions-swiper.jpeg";
+import MV01Image from "../../public/mv/01-lifestyle-home.jpeg";
+import MV02Image from "../../public/mv/02-movie-landing.jpeg";
+import MV03Image from "../../public/mv/03-movie-detail-cover.jpeg";
+import MV04Image from "../../public/mv/04-movie-detail-cinemas.jpeg";
+import MV05Image from "../../public/mv/05-movie-time.jpeg";
+import MV06Image from "../../public/mv/06-movie-seat-unselected.jpeg";
+import MV07Image from "../../public/mv/07-movie-seat-selected.jpeg";
+import MV08Image from "../../public/mv/08-movie-checkout.jpeg";
+import MV09Image from "../../public/mv/09-movie-receipt.jpeg";
+import MV10Image from "../../public/mv/10-movie-ticket.jpeg";
 ---
 
 <section class={twMerge("flex flex-col gap-6", Astro.props.class)}>
@@ -33,6 +65,39 @@ import HistorySection from "./history-section.astro";
         product managers, UI/UX staff, and quality assurance team members to
         ensure my deliverables fulfilled the requirements.
       </p>
+
+      <Carousel>
+        <Slide>
+          <Picture src={MV01Image} alt="mBCA Lifestyle Home Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV02Image} alt="Movie Vertical Landing Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV03Image} alt="Movie Vertical Detail Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV04Image} alt="Movie Vertical Cinemas Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV05Image} alt="Movie Vertical Time Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV06Image} alt="Movie Vertical Seat Unselected Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV07Image} alt="Movie Vertical Seat Selected Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV08Image} alt="Movie Vertical Checkout Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV09Image} alt="Movie Vertical Receipt Page" />
+        </Slide>
+        <Slide>
+          <Picture src={MV10Image} alt="Movie Vertical Ticket Page" />
+        </Slide>
+      </Carousel>
     </HistoryItem>
 
     <HistoryItem name="blu by BCA Digital" desc="Feb 2020 – Apr 2024">
@@ -67,5 +132,62 @@ import HistorySection from "./history-section.astro";
         and satisfaction, and the trend will likely continue.
       </p>
     </HistoryItem>
+
+    <Carousel>
+      <Slide>
+        <Picture src={BLU01Image} alt="blu by BCA Landing Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU02Image} alt="blu by BCA Prelogin Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU03Image} alt="blu by BCA Home Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU04Image} alt="blu by BCA Transaction Sheet Page" />
+      </Slide>
+      <Slide>
+        <Picture
+          src={BLU05Image}
+          alt="blu by BCA Transfer Destination List Page"
+        />
+      </Slide>
+      <Slide>
+        <Picture src={BLU06Image} alt="blu by BCA Transfer Detail Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU07Image} alt="blu by BCA Flazz NFC Scan Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU08Image} alt="blu by BCA Gift Card Design Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU09Image} alt="blu by BCA Subaccount Creation Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU10Image} alt="blu by BCA Settings Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU11Image} alt="blu by BCA Profile Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU12Image} alt="blu by BCA Update Address Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU13Image} alt="blu by BCA Referral Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU14Image} alt="blu by BCA Proxy Address Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU15Image} alt="blu by BCA Biometrics Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU16Image} alt="blu by BCA Tracker and History Page" />
+      </Slide>
+      <Slide>
+        <Picture src={BLU17Image} alt="blu by BCA Promotions Swiper Page" />
+      </Slide>
+    </Carousel>
   </HistorySection>
 </section>

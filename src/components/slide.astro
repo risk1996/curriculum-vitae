@@ -1,0 +1,16 @@
+---
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  class?: string;
+}
+---
+
+<div
+  class={twMerge(
+    "embla__slide min-w-0 flex-shrink-0 flex-grow-0 basis-full",
+    Astro.props.class,
+  )}
+>
+  <slot />
+</div>
