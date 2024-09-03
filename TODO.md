@@ -1,5 +1,6 @@
  - [ ] Carousel app screenshots layout
  - [ ] Carousel app screenshots description
+ - [ ] Print app screenshot layout
  - [ ] Work project summary + bold important points
  - [ ] Mobile responsive
  - [ ] Breakdown work projects

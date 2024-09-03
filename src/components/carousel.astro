@@ -21,37 +21,37 @@ interface Props {
 
 <script>
   import EmblaCarousel, { type EmblaCarouselType } from "embla-carousel";
-  import invariant from "tiny-invariant";
 
-  const nodes = document.querySelectorAll(".embla");
+  const nodes = document.querySelectorAll<HTMLElement>(".embla");
 
   for (const root of nodes) {
     const viewport = root.querySelector<HTMLElement>(".embla__viewport");
-    invariant(viewport, "Carousel viewport not found");
-    const carousel: EmblaCarouselType = EmblaCarousel(viewport);
+    const carousel: EmblaCarouselType = EmblaCarousel(viewport ?? root);
 
     const prev = root.querySelector(".embla__prev");
-    invariant(prev, "Carousel prev button not found");
-    prev.addEventListener("click", () => carousel.scrollPrev());
-    const updatePrevActive = () =>
-      carousel.canScrollPrev()
-        ? prev.removeAttribute("disabled")
-        : prev.setAttribute("disabled", "disabled");
-    carousel.on("select", updatePrevActive);
-    carousel.on("init", updatePrevActive);
-    carousel.on("reInit", updatePrevActive);
-    carousel.on("destroy", () => prev.removeAttribute("disabled"));
+    if (prev) {
+      prev.addEventListener("click", () => carousel.scrollPrev());
+      const updatePrevActive = () =>
+        carousel.canScrollPrev()
+          ? prev.removeAttribute("disabled")
+          : prev.setAttribute("disabled", "disabled");
+      carousel.on("select", updatePrevActive);
+      carousel.on("init", updatePrevActive);
+      carousel.on("reInit", updatePrevActive);
+      carousel.on("destroy", () => prev.removeAttribute("disabled"));
+    }
 
     const next = root.querySelector(".embla__next");
-    invariant(next, "Carousel next button not found");
-    next.addEventListener("click", () => carousel.scrollNext());
-    const updateNextActive = () =>
-      carousel.canScrollNext()
-        ? next.removeAttribute("disabled")
-        : next.setAttribute("disabled", "disabled");
-    carousel.on("select", updateNextActive);
-    carousel.on("init", updateNextActive);
-    carousel.on("reInit", updateNextActive);
-    carousel.on("destroy", () => next.removeAttribute("disabled"));
+    if (next) {
+      next.addEventListener("click", () => carousel.scrollNext());
+      const updateNextActive = () =>
+        carousel.canScrollNext()
+          ? next.removeAttribute("disabled")
+          : next.setAttribute("disabled", "disabled");
+      carousel.on("select", updateNextActive);
+      carousel.on("init", updateNextActive);
+      carousel.on("reInit", updateNextActive);
+      carousel.on("destroy", () => next.removeAttribute("disabled"));
+    }
   }
 </script>
