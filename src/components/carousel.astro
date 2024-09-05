@@ -8,25 +8,34 @@ interface Props {
 
 <div class={twMerge("embla relative", Astro.props.class)}>
   <div class="embla__viewport overflow-hidden">
-    <div class="embla__container flex">
+    <div class="embla__container flex touch-pan-y touch-pinch-zoom">
       <slot />
     </div>
   </div>
 
-  <div class="embla__controls absolute inset-0 flex justify-between">
-    <button class="embla__prev my-auto">&lt;</button>
-    <button class="embla__next my-auto">&gt;</button>
-  </div>
+  <button
+    class="embla__prev absolute bottom-0 left-0 top-0 my-auto flex h-8 w-8 cursor-pointer touch-manipulation appearance-none content-center justify-center rounded-full border-2 border-tapa-50 bg-treehouse-950/70 text-tapa-50 shadow-2xl transition-all disabled:bg-treehouse-800/50 disabled:opacity-50"
+  >
+    &lt;
+  </button>
+  <button
+    class="embla__next absolute bottom-0 right-0 top-0 my-auto flex h-8 w-8 cursor-pointer touch-manipulation appearance-none content-center justify-center rounded-full border-2 border-tapa-50 bg-treehouse-950/70 text-tapa-50 shadow-2xl transition-all disabled:bg-treehouse-800/50 disabled:opacity-50"
+  >
+    &gt;
+  </button>
 </div>
 
 <script>
-  import EmblaCarousel, { type EmblaCarouselType } from "embla-carousel";
+  import EmblaCarousel from "embla-carousel";
 
   const nodes = document.querySelectorAll<HTMLElement>(".embla");
 
   for (const root of nodes) {
     const viewport = root.querySelector<HTMLElement>(".embla__viewport");
-    const carousel: EmblaCarouselType = EmblaCarousel(viewport ?? root);
+    const carousel = EmblaCarousel(viewport ?? root, {
+      containScroll: false,
+      skipSnaps: true,
+    });
 
     const prev = root.querySelector(".embla__prev");
     if (prev) {

@@ -14,3 +14,4 @@ Nov 2019 - Apr 2020
 ```
  - [ ] Sidebar diamonds
  - [ ] Responsive image (unpic)
+ - [ ] Image alt best practice

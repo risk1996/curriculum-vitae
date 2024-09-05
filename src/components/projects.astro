@@ -1,5 +1,5 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import { twMerge } from "tailwind-merge";
 
 import Carousel from "./carousel.astro";
@@ -67,35 +67,75 @@ import MV10Image from "../../public/mv/10-movie-ticket.jpeg";
       </p>
 
       <Carousel class="print:hidden">
-        <Slide>
-          <Picture src={MV01Image} alt="mBCA Lifestyle Home Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV01Image}
+            alt="mBCA Lifestyle Home Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV02Image} alt="Movie Vertical Landing Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV02Image}
+            alt="Movie Vertical Landing Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV03Image} alt="Movie Vertical Detail Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV03Image}
+            alt="Movie Vertical Detail Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV04Image} alt="Movie Vertical Cinemas Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV04Image}
+            alt="Movie Vertical Cinemas Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV05Image} alt="Movie Vertical Time Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV05Image}
+            alt="Movie Vertical Time Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV06Image} alt="Movie Vertical Seat Unselected Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV06Image}
+            alt="Movie Vertical Seat Unselected Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV07Image} alt="Movie Vertical Seat Selected Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV07Image}
+            alt="Movie Vertical Seat Selected Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV08Image} alt="Movie Vertical Checkout Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV08Image}
+            alt="Movie Vertical Checkout Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV09Image} alt="Movie Vertical Receipt Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV09Image}
+            alt="Movie Vertical Receipt Page"
+          />
         </Slide>
-        <Slide>
-          <Picture src={MV10Image} alt="Movie Vertical Ticket Page" />
+        <Slide class="mx-2">
+          <Image
+            class="select-none"
+            src={MV10Image}
+            alt="Movie Vertical Ticket Page"
+          />
         </Slide>
       </Carousel>
     </HistoryItem>
@@ -134,59 +174,124 @@ import MV10Image from "../../public/mv/10-movie-ticket.jpeg";
     </HistoryItem>
 
     <Carousel class="print:hidden">
-      <Slide>
-        <Picture src={BLU01Image} alt="blu by BCA Landing Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU01Image}
+          alt="blu by BCA Landing Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU02Image} alt="blu by BCA Prelogin Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU02Image}
+          alt="blu by BCA Prelogin Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU03Image} alt="blu by BCA Home Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU03Image}
+          alt="blu by BCA Home Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU04Image} alt="blu by BCA Transaction Sheet Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU04Image}
+          alt="blu by BCA Transaction Sheet Page"
+        />
       </Slide>
-      <Slide>
-        <Picture
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
           src={BLU05Image}
           alt="blu by BCA Transfer Destination List Page"
         />
       </Slide>
-      <Slide>
-        <Picture src={BLU06Image} alt="blu by BCA Transfer Detail Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU06Image}
+          alt="blu by BCA Transfer Detail Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU07Image} alt="blu by BCA Flazz NFC Scan Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU07Image}
+          alt="blu by BCA Flazz NFC Scan Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU08Image} alt="blu by BCA Gift Card Design Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU08Image}
+          alt="blu by BCA Gift Card Design Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU09Image} alt="blu by BCA Subaccount Creation Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU09Image}
+          alt="blu by BCA Subaccount Creation Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU10Image} alt="blu by BCA Settings Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU10Image}
+          alt="blu by BCA Settings Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU11Image} alt="blu by BCA Profile Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU11Image}
+          alt="blu by BCA Profile Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU12Image} alt="blu by BCA Update Address Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU12Image}
+          alt="blu by BCA Update Address Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU13Image} alt="blu by BCA Referral Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU13Image}
+          alt="blu by BCA Referral Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU14Image} alt="blu by BCA Proxy Address Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU14Image}
+          alt="blu by BCA Proxy Address Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU15Image} alt="blu by BCA Biometrics Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU15Image}
+          alt="blu by BCA Biometrics Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU16Image} alt="blu by BCA Tracker and History Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU16Image}
+          alt="blu by BCA Tracker and History Page"
+        />
       </Slide>
-      <Slide>
-        <Picture src={BLU17Image} alt="blu by BCA Promotions Swiper Page" />
+      <Slide class="mx-2">
+        <Image
+          class="select-none"
+          src={BLU17Image}
+          alt="blu by BCA Promotions Swiper Page"
+        />
       </Slide>
     </Carousel>
   </HistorySection>
