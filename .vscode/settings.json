@@ -2,14 +2,25 @@
   "cSpell.words": [
     "astrojs",
     "biomejs",
+    "blurhash",
     "fontsource",
     "iconify",
     "segoe",
     "tabler",
     "treehouse",
-    "tsconfigs"
+    "tsconfigs",
+    "unpic"
   ],
   "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[astro]": {
@@ -39,6 +50,6 @@
     "**/.factorypath": true,
     "**/.project": true,
     "**/.settings": true,
-    "**/node_modules": false
+    "**/node_modules": true
   }
 }

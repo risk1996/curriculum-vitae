@@ -1,9 +1,10 @@
 ---
+import { blurhashToCssGradientString as b } from "@unpic/placeholder";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import { twMerge } from "tailwind-merge";
 
-import PortraitImage from "../../public/portrait.png";
+import PortraitImage from "../../public/portrait.jpg";
 
 interface Props {
   class?: string;
@@ -11,15 +12,15 @@ interface Props {
 ---
 
 <section class={twMerge("flex flex-col", Astro.props.class)}>
-  <div class="-mt-6 flex-grow-0 bg-treehouse-200">
-    <Image
-      src={PortraitImage}
-      alt="Portrait picture of William Darian"
-      class="saturate-50"
-      height={331}
-      width={331}
-    />
-  </div>
+  <Image
+    src={PortraitImage}
+    alt="Portrait picture of William Darian"
+    height={331}
+    width={331}
+    class="-mt-6 flex-grow-0"
+    style={{ background: b("URMQ9Uof~pWB^+WBRjofI;ofM{jZ^*ayRjj[") }}
+  />
+
   <div class="flex flex-col gap-4 bg-treehouse-950 p-4 text-tapa-50">
     <div class="flex gap-2">
       <Icon name="tabler:mail" class="flex-shrink-0" size={32} />

@@ -1,6 +1,7 @@
  - [ ] Carousel app screenshots layout
  - [ ] Carousel app screenshots description
  - [ ] Print app screenshot layout
+ - [ ] Noscript app screenshot layout
  - [ ] Work project summary + bold important points
  - [ ] Mobile responsive
  - [ ] Breakdown work projects
@@ -13,5 +14,4 @@ Nov 2019 - Apr 2020
 *Techstack that I use*:
 ```
  - [ ] Sidebar diamonds
- - [ ] Responsive image (unpic)
  - [ ] Image alt best practice
