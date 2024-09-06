@@ -6,11 +6,9 @@ interface Props {
 }
 ---
 
-<div class={twMerge("embla relative", Astro.props.class)}>
-  <div class="embla__viewport overflow-hidden">
-    <div class="embla__container flex touch-pan-y touch-pinch-zoom">
-      <slot />
-    </div>
+<div class={twMerge("embla relative overflow-hidden", Astro.props.class)}>
+  <div class="embla__container flex touch-pan-y touch-pinch-zoom">
+    <slot />
   </div>
 
   <button
@@ -27,15 +25,17 @@ interface Props {
 
 <script>
   import EmblaCarousel from "embla-carousel";
+  import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 
   const nodes = document.querySelectorAll<HTMLElement>(".embla");
 
   for (const root of nodes) {
     const viewport = root.querySelector<HTMLElement>(".embla__viewport");
-    const carousel = EmblaCarousel(viewport ?? root, {
-      containScroll: false,
-      skipSnaps: true,
-    });
+    const carousel = EmblaCarousel(
+      viewport ?? root,
+      { containScroll: false, skipSnaps: true },
+      [WheelGesturesPlugin()],
+    );
 
     const prev = root.querySelector(".embla__prev");
     if (prev) {
