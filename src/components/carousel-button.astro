@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
@@ -10,9 +11,14 @@ interface Props {
 <button
   class={twMerge(
     Astro.props.type === "prev" ? "embla__prev" : "embla__next",
-    "h-8 w-8 cursor-pointer touch-manipulation appearance-none rounded-full border-2 border-tapa-50 bg-treehouse-950/70 text-base font-bold text-tapa-50 shadow-2xl transition-all disabled:bg-treehouse-800/50 disabled:opacity-50",
+    "flex h-8 w-8 cursor-pointer touch-manipulation appearance-none items-center justify-center rounded-full border-2 border-tapa-50 bg-treehouse-950/70 text-base font-bold text-tapa-50 shadow-2xl transition-all disabled:bg-treehouse-800/50 disabled:opacity-50",
     Astro.props.class,
   )}
 >
-  {Astro.props.type === "prev" ? "<" : ">"}
+  <Icon
+    name={Astro.props.type === "prev"
+      ? "tabler:caret-left-filled"
+      : "tabler:caret-right-filled"}
+    size={24}
+  />
 </button>

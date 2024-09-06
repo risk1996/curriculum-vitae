@@ -1,10 +1,10 @@
 ---
-import { blurhashToCssGradientString as b } from "@unpic/placeholder";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import { twMerge } from "tailwind-merge";
 
 import PortraitImage from "../../public/portrait.jpg";
+import { blurhash } from "../helpers/image";
 
 interface Props {
   class?: string;
@@ -18,7 +18,7 @@ interface Props {
     height={331}
     width={331}
     class="-mt-6 flex-grow-0"
-    style={{ background: b("URMQ9Uof~pWB^+WBRjofI;ofM{jZ^*ayRjj[") }}
+    style={blurhash("URMQ9Uof~pWB^+WBRjofI;ofM{jZ^*ayRjj[")}
   />
 
   <div class="flex flex-col gap-4 bg-treehouse-950 p-4 text-tapa-50">
