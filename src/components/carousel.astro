@@ -7,20 +7,7 @@ interface Props {
 ---
 
 <div class={twMerge("embla relative overflow-hidden", Astro.props.class)}>
-  <div class="embla__container flex touch-pan-y touch-pinch-zoom">
-    <slot />
-  </div>
-
-  <button
-    class="embla__prev absolute bottom-0 left-0 top-0 my-auto flex h-8 w-8 cursor-pointer touch-manipulation appearance-none content-center justify-center rounded-full border-2 border-tapa-50 bg-treehouse-950/70 text-tapa-50 shadow-2xl transition-all disabled:bg-treehouse-800/50 disabled:opacity-50"
-  >
-    &lt;
-  </button>
-  <button
-    class="embla__next absolute bottom-0 right-0 top-0 my-auto flex h-8 w-8 cursor-pointer touch-manipulation appearance-none content-center justify-center rounded-full border-2 border-tapa-50 bg-treehouse-950/70 text-tapa-50 shadow-2xl transition-all disabled:bg-treehouse-800/50 disabled:opacity-50"
-  >
-    &gt;
-  </button>
+  <slot />
 </div>
 
 <script>

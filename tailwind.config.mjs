@@ -15,6 +15,7 @@ export default {
       ],
     },
     colors: {
+      transparent: "transparent",
       treehouse: {
         DEFAULT: "#36291e",
         50: "#f2ede8",

@@ -36,6 +36,8 @@ import MV07Image from "../../public/mv/07-movie-seat-selected.jpeg";
 import MV08Image from "../../public/mv/08-movie-checkout.jpeg";
 import MV09Image from "../../public/mv/09-movie-receipt.jpeg";
 import MV10Image from "../../public/mv/10-movie-ticket.jpeg";
+import CarouselButton from "./carousel-button.astro";
+import CarouselContainer from "./carousel-container.astro";
 ---
 
 <section class={twMerge("flex flex-col gap-6", Astro.props.class)}>
@@ -69,106 +71,119 @@ import MV10Image from "../../public/mv/10-movie-ticket.jpeg";
       </p>
 
       <Carousel class="-my-4 py-4 print:hidden">
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV01Image}
-            alt="mBCA Lifestyle Home Page"
-            height={400}
-            width={400 * aspect(MV01Image)}
-            style={{ background: b("UJP@6HD*RkkC0LRks:of~UIVM|j[V[IoNGj[") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV02Image}
-            alt="Movie Vertical Landing Page"
-            height={400}
-            width={400 * aspect(MV02Image)}
-            style={{ background: b("UTR3We00t7?bt7t7a}Rk~q^+ayIUM{RjfQoL") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV03Image}
-            alt="Movie Vertical Detail Page"
-            height={400}
-            width={400 * aspect(MV03Image)}
-            style={{ background: b("UdFr|vj[bIae%gj?ayj[~qogjYozIokCoLkC") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV04Image}
-            alt="Movie Vertical Cinemas Page"
-            height={400}
-            width={400 * aspect(MV04Image)}
-            style={{ background: b("UxLXY:j[fkj[00j[j[j[~qayjZj[.8j[j[az") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV05Image}
-            alt="Movie Vertical Time Page"
-            height={400}
-            width={400 * aspect(MV05Image)}
-            style={{ background: b("U2Ss500000RO000000IA9FIUozM{^+~q_Nx]") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV06Image}
-            alt="Movie Vertical Seat Unselected Page"
-            height={400}
-            width={400 * aspect(MV06Image)}
-            style={{ background: b("UORMb,Rjt6ju_1WBRkj[0Mfks:fk~Vofbbf6") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV07Image}
-            alt="Movie Vertical Seat Selected Page"
-            height={400}
-            width={400 * aspect(MV07Image)}
-            style={{ background: b("UKRC[At7%LR-_0ofofWV02RjjZs:~URjNGs:") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV08Image}
-            alt="Movie Vertical Checkout Page"
-            height={400}
-            width={400 * aspect(MV08Image)}
-            style={{ background: b("UUQ,RKD%M{ay-mIURjj[4:oft7j[~p%Mofay") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV09Image}
-            alt="Movie Vertical Receipt Page"
-            height={400}
-            width={400 * aspect(MV09Image)}
-            style={{ background: b("U3S$ow00s8%MIq_3~pWB9Gt8?GWV9FWBj[Rj") }}
-          />
-        </Slide>
-        <Slide class="mx-2">
-          <Image
-            class="select-none rounded-md shadow-md"
-            src={MV10Image}
-            alt="Movie Vertical Ticket Page"
-            height={400}
-            width={400 * aspect(MV10Image)}
-            style={{ background: b("UBR:HG00D%oL-;ozWBj@~q~q-;ofD%IURjf6") }}
-          />
-        </Slide>
+        <CarouselContainer>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV01Image}
+              alt="mBCA Lifestyle Home Page"
+              height={400}
+              width={400 * aspect(MV01Image)}
+              style={{ background: b("UJP@6HD*RkkC0LRks:of~UIVM|j[V[IoNGj[") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV02Image}
+              alt="Movie Vertical Landing Page"
+              height={400}
+              width={400 * aspect(MV02Image)}
+              style={{ background: b("UTR3We00t7?bt7t7a}Rk~q^+ayIUM{RjfQoL") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV03Image}
+              alt="Movie Vertical Detail Page"
+              height={400}
+              width={400 * aspect(MV03Image)}
+              style={{ background: b("UdFr|vj[bIae%gj?ayj[~qogjYozIokCoLkC") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV04Image}
+              alt="Movie Vertical Cinemas Page"
+              height={400}
+              width={400 * aspect(MV04Image)}
+              style={{ background: b("UxLXY:j[fkj[00j[j[j[~qayjZj[.8j[j[az") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV05Image}
+              alt="Movie Vertical Time Page"
+              height={400}
+              width={400 * aspect(MV05Image)}
+              style={{ background: b("U2Ss500000RO000000IA9FIUozM{^+~q_Nx]") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV06Image}
+              alt="Movie Vertical Seat Unselected Page"
+              height={400}
+              width={400 * aspect(MV06Image)}
+              style={{ background: b("UORMb,Rjt6ju_1WBRkj[0Mfks:fk~Vofbbf6") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV07Image}
+              alt="Movie Vertical Seat Selected Page"
+              height={400}
+              width={400 * aspect(MV07Image)}
+              style={{ background: b("UKRC[At7%LR-_0ofofWV02RjjZs:~URjNGs:") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV08Image}
+              alt="Movie Vertical Checkout Page"
+              height={400}
+              width={400 * aspect(MV08Image)}
+              style={{ background: b("UUQ,RKD%M{ay-mIURjj[4:oft7j[~p%Mofay") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV09Image}
+              alt="Movie Vertical Receipt Page"
+              height={400}
+              width={400 * aspect(MV09Image)}
+              style={{ background: b("U3S$ow00s8%MIq_3~pWB9Gt8?GWV9FWBj[Rj") }}
+            />
+          </Slide>
+          <Slide class="mx-2">
+            <Image
+              class="select-none rounded-md shadow-md"
+              src={MV10Image}
+              alt="Movie Vertical Ticket Page"
+              height={400}
+              width={400 * aspect(MV10Image)}
+              style={{ background: b("UBR:HG00D%oL-;ozWBj@~q~q-;ofD%IURjf6") }}
+            />
+          </Slide>
+        </CarouselContainer>
+
+        <div
+          class="to-transparent absolute bottom-0 left-0 top-0 my-auto flex items-center bg-gradient-to-r from-treehouse-50"
+        >
+          <CarouselButton type="prev" />
+        </div>
+        <div
+          class="to-transparent absolute bottom-0 right-0 top-0 my-auto flex items-center bg-gradient-to-l from-treehouse-50"
+        >
+          <CarouselButton type="next" />
+        </div>
       </Carousel>
     </HistoryItem>
 
@@ -206,176 +221,189 @@ import MV10Image from "../../public/mv/10-movie-ticket.jpeg";
     </HistoryItem>
 
     <Carousel class="-my-4 py-4 print:hidden">
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU01Image}
-          alt="blu by BCA Landing Page"
-          height={400}
-          width={400 * aspect(BLU01Image)}
-          style={{ background: b("UBCK3TWBCQtk2Boz+^V@_Noyq^V@DORjcEtR") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU02Image}
-          alt="blu by BCA Prelogin Page"
-          height={400}
-          width={400 * aspect(BLU02Image)}
-          style={{ background: b("U@Nv}mjZx[j[xUWBWCjt?wWVRjay%KjtWBa{") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU03Image}
-          alt="blu by BCA Home Page"
-          height={400}
-          width={400 * aspect(BLU03Image)}
-          style={{ background: b("U5QAU0*DIX^m0vHw9Z%b00Tnx]8}3yDSJ5O8") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU04Image}
-          alt="blu by BCA Transaction Sheet Page"
-          height={400}
-          width={400 * aspect(BLU04Image)}
-          style={{ background: b("U4OgWz9b~n-o00xo4qR-00V{R:WA03bI%FV@") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU05Image}
-          alt="blu by BCA Transfer Destination List Page"
-          height={400}
-          width={400 * aspect(BLU05Image)}
-          style={{ background: b("UASF@X9ay9o#~S$*DnaeRYxZ-#jY?qR%9Joy") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU06Image}
-          alt="blu by BCA Transfer Detail Page"
-          height={400}
-          width={400 * aspect(BLU06Image)}
-          style={{ background: b("UJS6Puax%Ij^~iayIWj[D?j]WCj=?TofRkaf") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU07Image}
-          alt="blu by BCA Flazz NFC Scan Page"
-          height={400}
-          width={400 * aspect(BLU07Image)}
-          style={{ background: b("UWLN.6j[xZay00ayWCayaxayazj[~qayt6j[") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU08Image}
-          alt="blu by BCA Gift Card Design Page"
-          height={400}
-          width={400 * aspect(BLU08Image)}
-          style={{ background: b("UlNwc=WBx]a#-.j@V[ay~qflVsj@xRayWEja") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU09Image}
-          alt="blu by BCA Subaccount Creation Page"
-          height={400}
-          width={400 * aspect(BLU09Image)}
-          style={{ background: b("UZRns7WBxYofujj[V^ay8yoft6af?[ayR.oL") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU10Image}
-          alt="blu by BCA Settings Page"
-          height={400}
-          width={400 * aspect(BLU10Image)}
-          style={{ background: b("U3Ss884n9tXS-VadVrsT^*Nx%Mof_N^+E1R+") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU11Image}
-          alt="blu by BCA Profile Page"
-          height={400}
-          width={400 * aspect(BLU11Image)}
-          style={{ background: b("U4S$ovD%-;t7_3xtf6j[IUj[Rjay~qof4nWB") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU12Image}
-          alt="blu by BCA Update Address Page"
-          height={400}
-          width={400 * aspect(BLU12Image)}
-          style={{ background: b("UFRMe|jFxst7-woLIXfk0Bj]xsj[~jofM|oL") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU13Image}
-          alt="blu by BCA Referral Page"
-          height={400}
-          width={400 * aspect(BLU13Image)}
-          style={{ background: b("UWQAHsae?aoL~6bHbwa}9ioeoHay_0jZD*j[") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU14Image}
-          alt="blu by BCA Proxy Address Page"
-          height={400}
-          width={400 * aspect(BLU14Image)}
-          style={{ background: b("U5Ss8A03-:~m?T%GIVM+-%--RkIWRrRWM{xp") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU15Image}
-          alt="blu by BCA Biometrics Page"
-          height={400}
-          width={400 * aspect(BLU15Image)}
-          style={{ background: b("UCQ^2LM{~qtQ0JofWBayTvWV00ax0ws:Rjj[") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU16Image}
-          alt="blu by BCA Tracker and History Page"
-          height={400}
-          width={400 * aspect(BLU16Image)}
-          style={{ background: b("U4R3sG~K%29i0c97ix?T00~QSK9g00D@n$x,") }}
-        />
-      </Slide>
-      <Slide class="mx-2">
-        <Image
-          class="select-none rounded-md shadow-md"
-          src={BLU17Image}
-          alt="blu by BCA Promotions Swiper Page"
-          height={400}
-          width={400 * aspect(BLU17Image)}
-          style={{ background: b("U78gz0=}0e0M#QVsTKJ8NFInRisl0fIp~B^*") }}
-        />
-      </Slide>
+      <CarouselContainer>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU01Image}
+            alt="blu by BCA Landing Page"
+            height={400}
+            width={400 * aspect(BLU01Image)}
+            style={{ background: b("UBCK3TWBCQtk2Boz+^V@_Noyq^V@DORjcEtR") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU02Image}
+            alt="blu by BCA Prelogin Page"
+            height={400}
+            width={400 * aspect(BLU02Image)}
+            style={{ background: b("U@Nv}mjZx[j[xUWBWCjt?wWVRjay%KjtWBa{") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU03Image}
+            alt="blu by BCA Home Page"
+            height={400}
+            width={400 * aspect(BLU03Image)}
+            style={{ background: b("U5QAU0*DIX^m0vHw9Z%b00Tnx]8}3yDSJ5O8") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU04Image}
+            alt="blu by BCA Transaction Sheet Page"
+            height={400}
+            width={400 * aspect(BLU04Image)}
+            style={{ background: b("U4OgWz9b~n-o00xo4qR-00V{R:WA03bI%FV@") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU05Image}
+            alt="blu by BCA Transfer Destination List Page"
+            height={400}
+            width={400 * aspect(BLU05Image)}
+            style={{ background: b("UASF@X9ay9o#~S$*DnaeRYxZ-#jY?qR%9Joy") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU06Image}
+            alt="blu by BCA Transfer Detail Page"
+            height={400}
+            width={400 * aspect(BLU06Image)}
+            style={{ background: b("UJS6Puax%Ij^~iayIWj[D?j]WCj=?TofRkaf") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU07Image}
+            alt="blu by BCA Flazz NFC Scan Page"
+            height={400}
+            width={400 * aspect(BLU07Image)}
+            style={{ background: b("UWLN.6j[xZay00ayWCayaxayazj[~qayt6j[") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU08Image}
+            alt="blu by BCA Gift Card Design Page"
+            height={400}
+            width={400 * aspect(BLU08Image)}
+            style={{ background: b("UlNwc=WBx]a#-.j@V[ay~qflVsj@xRayWEja") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU09Image}
+            alt="blu by BCA Subaccount Creation Page"
+            height={400}
+            width={400 * aspect(BLU09Image)}
+            style={{ background: b("UZRns7WBxYofujj[V^ay8yoft6af?[ayR.oL") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU10Image}
+            alt="blu by BCA Settings Page"
+            height={400}
+            width={400 * aspect(BLU10Image)}
+            style={{ background: b("U3Ss884n9tXS-VadVrsT^*Nx%Mof_N^+E1R+") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU11Image}
+            alt="blu by BCA Profile Page"
+            height={400}
+            width={400 * aspect(BLU11Image)}
+            style={{ background: b("U4S$ovD%-;t7_3xtf6j[IUj[Rjay~qof4nWB") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU12Image}
+            alt="blu by BCA Update Address Page"
+            height={400}
+            width={400 * aspect(BLU12Image)}
+            style={{ background: b("UFRMe|jFxst7-woLIXfk0Bj]xsj[~jofM|oL") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU13Image}
+            alt="blu by BCA Referral Page"
+            height={400}
+            width={400 * aspect(BLU13Image)}
+            style={{ background: b("UWQAHsae?aoL~6bHbwa}9ioeoHay_0jZD*j[") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU14Image}
+            alt="blu by BCA Proxy Address Page"
+            height={400}
+            width={400 * aspect(BLU14Image)}
+            style={{ background: b("U5Ss8A03-:~m?T%GIVM+-%--RkIWRrRWM{xp") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU15Image}
+            alt="blu by BCA Biometrics Page"
+            height={400}
+            width={400 * aspect(BLU15Image)}
+            style={{ background: b("UCQ^2LM{~qtQ0JofWBayTvWV00ax0ws:Rjj[") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU16Image}
+            alt="blu by BCA Tracker and History Page"
+            height={400}
+            width={400 * aspect(BLU16Image)}
+            style={{ background: b("U4R3sG~K%29i0c97ix?T00~QSK9g00D@n$x,") }}
+          />
+        </Slide>
+        <Slide class="mx-2">
+          <Image
+            class="select-none rounded-md shadow-md"
+            src={BLU17Image}
+            alt="blu by BCA Promotions Swiper Page"
+            height={400}
+            width={400 * aspect(BLU17Image)}
+            style={{ background: b("U78gz0=}0e0M#QVsTKJ8NFInRisl0fIp~B^*") }}
+          />
+        </Slide>
+      </CarouselContainer>
+
+      <div
+        class="to-transparent absolute bottom-0 left-0 top-0 my-auto flex items-center bg-gradient-to-r from-treehouse-50"
+      >
+        <CarouselButton type="prev" />
+      </div>
+      <div
+        class="to-transparent absolute bottom-0 right-0 top-0 my-auto flex items-center bg-gradient-to-l from-treehouse-50"
+      >
+        <CarouselButton type="next" />
+      </div>
     </Carousel>
   </HistorySection>
 </section>
