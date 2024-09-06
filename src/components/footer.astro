@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+import dayjs from "dayjs";
+
+import { twMerge } from "tailwind-merge";
+import { yearRange } from "../helpers/date";
+
+const startDate = new Date(2024, 7, 31);
+const currentDate = new Date();
+
+interface Props {
+  class?: string;
+}
+---
+
+<footer
+  class={twMerge(
+    "flex justify-center print:justify-between",
+    Astro.props.class,
+  )}
+>
+  <p class="text-xs text-tapa-600 print:hidden">
+    Made with
+    <span class="text-[#e25555]">♥</span> by
+    <a class="underline print:no-underline" href="https://github.com/risk1996">
+      <Icon
+        name="tabler:external-link"
+        size={12}
+        class="inline print:hidden"
+      />William Darian</a
+    > © {yearRange(startDate, currentDate)}
+  </p>
+  <p class="hidden text-xs text-tapa-600 print:block">
+    Last updated on {dayjs(currentDate).format("D MMMM, YYYY")}
+  </p>
+  <p class="hidden text-xs text-tapa-600 print:block">
+    Online version available at
+    <a class="underline"> https://risk1996.github.io/curriculum-vitae/ </a>
+  </p>
+</footer>
