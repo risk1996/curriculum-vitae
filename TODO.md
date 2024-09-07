@@ -1,6 +1,4 @@
  - [ ] Carousel app screenshots description
- - [ ] Print app screenshot layout
- - [ ] Noscript app screenshot layout
  - [ ] Work project summary + bold important points
  - [ ] Mobile responsive
  - [ ] Breakdown work projects

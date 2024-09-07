@@ -1,3 +1,5 @@
+import plugin from "tailwindcss/plugin";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -44,7 +46,28 @@ export default {
         900: "#1a1a19",
       },
     },
-    extend: {},
+    extend: {
+      order: {
+        13: "13",
+        14: "14",
+        15: "15",
+        16: "16",
+        17: "17",
+        18: "18",
+        19: "19",
+        20: "20",
+        21: "21",
+        22: "22",
+        23: "23",
+        24: "24",
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addVariant }) => {
+      addVariant("screen", "@media screen");
+      addVariant("script", "@media (scripting: enabled)");
+      addVariant("-script", "@media (scripting: none)");
+    }),
+  ],
 };
