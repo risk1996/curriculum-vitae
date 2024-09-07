@@ -71,9 +71,9 @@ import CarouselContainer from "./carousel-container.astro";
 
       <Carousel class="-my-4 py-4">
         <CarouselContainer
-          class="grid grid-cols-[1fr_2fr_1fr_2fr_1fr_1fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
+          class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_2fr_1fr_1fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
         >
-          <Slide class="order-1 screen:script:order-1">
+          <Slide>
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/01-lifestyle-home.jpg`}
@@ -88,7 +88,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-7 screen:script:order-2">
+          <Slide>
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/02-movie-landing.jpg`}
@@ -103,7 +103,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-2 row-span-2 screen:script:order-3">
+          <Slide class="row-span-2">
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/03-movie-detail-cover.jpg`}
@@ -118,7 +118,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-3 screen:script:order-4">
+          <Slide>
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/04-movie-detail-cinemas.jpg`}
@@ -133,7 +133,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-8 screen:script:order-5">
+          <Slide>
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/05-movie-time.jpg`}
@@ -148,7 +148,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-4 row-span-2 screen:script:order-6">
+          <Slide class="row-span-2">
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/06-movie-seat-unselected.jpg`}
@@ -163,7 +163,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-5 screen:script:order-7">
+          <Slide>
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/07-movie-seat-selected.jpg`}
@@ -178,7 +178,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-6 screen:script:order-8">
+          <Slide>
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/08-movie-checkout.jpg`}
@@ -193,7 +193,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-9 screen:script:order-9">
+          <Slide>
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/09-movie-receipt.jpg`}
@@ -208,7 +208,7 @@ import CarouselContainer from "./carousel-container.astro";
               />
             </a>
           </Slide>
-          <Slide class="order-10 screen:script:order-10">
+          <Slide>
             <a
               class="flex items-center justify-center"
               href={`${import.meta.env.BASE_URL}/mv/10-movie-ticket.jpg`}
@@ -273,9 +273,9 @@ import CarouselContainer from "./carousel-container.astro";
 
     <Carousel class="-my-4 py-4">
       <CarouselContainer
-        class="grid grid-cols-[1fr_2fr_1fr_1fr_2fr_1fr_1fr_1fr_1fr_2fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
+        class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_1fr_2fr_1fr_1fr_1fr_1fr_2fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
       >
-        <Slide class="order-1 screen:script:order-1">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/01-landing.jpg`}
@@ -290,7 +290,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-11 screen:script:order-2">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/02-prelogin.jpg`}
@@ -305,7 +305,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-2 row-span-2 screen:script:order-3">
+        <Slide class="row-span-2">
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/03-home.jpg`}
@@ -320,7 +320,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-3 screen:script:order-4">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/04-transaction-sheet.jpg`}
@@ -335,7 +335,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-4 screen:script:order-5">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/05-transfer-destination-list.jpg`}
@@ -350,7 +350,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-12 screen:script:order-6">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/06-transfer-detail.jpg`}
@@ -365,7 +365,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-13 screen:script:order-7">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/07-flazz-nfc-scan.jpg`}
@@ -380,7 +380,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-5 row-span-2 screen:script:order-8">
+        <Slide class="row-span-2">
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/08-gift-card-design.jpg`}
@@ -395,7 +395,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-6 screen:script:order-9">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/09-subaccount-creation.jpg`}
@@ -410,7 +410,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-7 screen:script:order-10">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/10-settings.jpg`}
@@ -425,7 +425,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-8 screen:script:order-11">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/11-profile.jpg`}
@@ -440,7 +440,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-9 screen:script:order-12">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/12-update-address.jpg`}
@@ -455,7 +455,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-14 screen:script:order-13">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/13-referral.jpg`}
@@ -470,7 +470,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-15 screen:script:order-14">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/14-proxy-address.jpg`}
@@ -485,7 +485,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-16 screen:script:order-15">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/15-biometrics.jpg`}
@@ -500,7 +500,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-17 screen:script:order-16">
+        <Slide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/16-tracker-and-history.jpg`}
@@ -515,7 +515,7 @@ import CarouselContainer from "./carousel-container.astro";
             />
           </a>
         </Slide>
-        <Slide class="order-10 row-span-2 screen:script:order-17">
+        <Slide class="row-span-2">
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/blu/17-promotions-swiper.jpg`}
