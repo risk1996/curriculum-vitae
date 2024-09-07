@@ -1,4 +1,3 @@
- - [ ] Carousel app screenshots layout
  - [ ] Carousel app screenshots description
  - [ ] Print app screenshot layout
  - [ ] Noscript app screenshot layout
@@ -13,5 +12,4 @@ Nov 2019 - Apr 2020
 *How it benefit the company*:
 *Techstack that I use*:
 ```
- - [ ] Sidebar diamonds
  - [ ] Image alt best practice
