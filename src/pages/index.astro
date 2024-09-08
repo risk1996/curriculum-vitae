@@ -28,8 +28,24 @@ import Layout from "../layout.astro";
       <Sidebar class="mt-6" />
     </div>
 
+    <div class="h-6 break-before-page"></div>
+
     <Projects class="col-span-12" />
   </main>
 
-  <Footer class="mt-8" />
+  <Footer class="mt-8 print:mt-2" />
 </Layout>
+
+<style>
+  @media print {
+    @page {
+      size: A4;
+    }
+
+    body {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      zoom: 77%;
+    }
+  }
+</style>

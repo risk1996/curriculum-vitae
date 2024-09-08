@@ -8,13 +8,17 @@ interface Props {
 ---
 
 <div class={Astro.props.class}>
-  <h4 class="text-xl font-medium">{Astro.props.name}</h4>
-  <p class="text-base text-tapa-600">
+  <h4 class="break-before-avoid-page text-xl font-medium">
+    {Astro.props.name}
+  </h4>
+  <p class="break-before-avoid-page text-base text-tapa-600">
     {Astro.props.desc}
   </p>
   {
     Astro.props.info ? (
-      <p class="text-sm text-tapa-500">{Astro.props.info}</p>
+      <p class="break-before-avoid-page text-sm text-tapa-500">
+        {Astro.props.info}
+      </p>
     ) : null
   }
   <slot />
