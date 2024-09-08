@@ -28,12 +28,12 @@ import Layout from "../layout.astro";
       <Sidebar class="mt-6" />
     </div>
 
-    <div class="break-before-page print:h-6"></div>
+    <div class="break-before-page screen:hidden print:h-4"></div>
 
-    <Projects class="col-span-12" />
+    <Projects class="col-span-12 mt-2" />
   </main>
 
-  <Footer class="mt-6 print:mt-2" />
+  <Footer class="mt-6 print:mt-52" />
 </Layout>
 
 <style>
@@ -45,7 +45,7 @@ import Layout from "../layout.astro";
     body {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
-      zoom: 77%;
+      zoom: 78%;
     }
   }
 </style>

@@ -39,506 +39,178 @@ import CarouselButton from "./carousel-button.astro";
 import CarouselContainer from "./carousel-container.astro";
 ---
 
-<section class={twMerge("flex flex-col gap-6", Astro.props.class)}>
-  <HistorySection class="mb-4 flex flex-col gap-4" legend="Work Projects">
-    <HistoryItem
-      name="BCA Lifestyle: Movie Vertical"
-      desc="Nov 2019 – Apr 2020"
-    >
-      <p
-        class="break-before-avoid-page pb-1 text-justify text-sm text-tapa-500"
-      >
-        I developed the front-end web interface and integrated the movie ticket
-        vertical, using popular JavaScript libraries such as ReactJS, Redux
-        (with Redux Thunk middleware), React I18n, React Router, Axios, and
-        Webpack. The app communicates with the underlying service through REST
-        APIs.
-      </p>
-      <p
-        class="break-before-avoid-page pb-1 text-justify indent-4 text-sm text-tapa-500"
-      >
-        Within the app, users can buy movie tickets online in a few easy steps.
-        Users browse the movie they want to watch and select the cinema
-        location, the showtime, and the seat location. Then the user will see a
-        checkout page showing the purchase details. The payment process will ask
-        the users for their PIN and the amount will be deducted directly from
-        the bank account balance. The movie tickets can be redeemed at the
-        cinema using the code shown on the app.
-      </p>
-      <p
-        class="break-before-avoid-page pb-1 text-justify indent-4 text-sm text-tapa-500"
-      >
-        The movie ticket vertical integration took about six months. I worked
-        with a front-end team that consisted of three people: a senior software
-        engineer and two other software engineers. I communicated with the
-        product managers, UI/UX staff, and quality assurance team members to
-        ensure my deliverables fulfilled the requirements.
-      </p>
+<HistorySection
+  class={twMerge("flex flex-col gap-4", Astro.props.class)}
+  legend="Work Projects"
+>
+  <HistoryItem name="BCA Lifestyle: Movie Vertical" desc="Nov 2019 – Apr 2020">
+    <p class="pb-2 text-justify text-sm text-tapa-500">
+      <b> Scope: </b>
+      Developed and integrated the movie ticket vertical within a digital banking
+      app, working with a three-person front-end team and coordinating with cross-functional
+      teams.
+    </p>
+    <p class="pb-2 text-justify text-sm text-tapa-500">
+      <b>Impact:</b>
+      Enabled seamless movie ticket purchases, seat selection, and e-ticket viewing.
+      Completed the project in six months.
+    </p>
+    <p class="pb-2 text-justify text-sm text-tapa-500">
+      <b> Tech Stack:</b>
+      React, Redux + Thunk middleware, React Router, Axios, Webpack, REST APIs.
+    </p>
 
-      <Carousel class="-my-2 break-before-avoid-page py-2">
-        <CarouselContainer
-          class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_2fr_1fr_1fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
-        >
-          <Slide>
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/01-lifestyle-home.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV01Image}
-                alt="mBCA Lifestyle Home Page"
-                height={400}
-                width={400 * aspect(MV01Image)}
-                style={blurhash("UJP@6HD*RkkC0LRks:of~UIVM|j[V[IoNGj[")}
-              />
-            </a>
-          </Slide>
-          <Slide>
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/02-movie-landing.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV02Image}
-                alt="Movie Vertical Landing Page"
-                height={400}
-                width={400 * aspect(MV02Image)}
-                style={blurhash("UTR3We00t7?bt7t7a}Rk~q^+ayIUM{RjfQoL")}
-              />
-            </a>
-          </Slide>
-          <Slide class="row-span-2">
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/03-movie-detail-cover.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV03Image}
-                alt="Movie Vertical Detail Page"
-                height={400}
-                width={400 * aspect(MV03Image)}
-                style={blurhash("UdFr|vj[bIae%gj?ayj[~qogjYozIokCoLkC")}
-              />
-            </a>
-          </Slide>
-          <Slide>
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/04-movie-detail-cinemas.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV04Image}
-                alt="Movie Vertical Cinemas Page"
-                height={400}
-                width={400 * aspect(MV04Image)}
-                style={blurhash("UxLXY:j[fkj[00j[j[j[~qayjZj[.8j[j[az")}
-              />
-            </a>
-          </Slide>
-          <Slide>
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/05-movie-time.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV05Image}
-                alt="Movie Vertical Time Page"
-                height={400}
-                width={400 * aspect(MV05Image)}
-                style={blurhash("U2Ss500000RO000000IA9FIUozM{^+~q_Nx]")}
-              />
-            </a>
-          </Slide>
-          <Slide class="row-span-2">
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/06-movie-seat-unselected.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV06Image}
-                alt="Movie Vertical Seat Unselected Page"
-                height={400}
-                width={400 * aspect(MV06Image)}
-                style={blurhash("UORMb,Rjt6ju_1WBRkj[0Mfks:fk~Vofbbf6")}
-              />
-            </a>
-          </Slide>
-          <Slide>
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/07-movie-seat-selected.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV07Image}
-                alt="Movie Vertical Seat Selected Page"
-                height={400}
-                width={400 * aspect(MV07Image)}
-                style={blurhash("UKRC[At7%LR-_0ofofWV02RjjZs:~URjNGs:")}
-              />
-            </a>
-          </Slide>
-          <Slide>
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/08-movie-checkout.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV08Image}
-                alt="Movie Vertical Checkout Page"
-                height={400}
-                width={400 * aspect(MV08Image)}
-                style={blurhash("UUQ,RKD%M{ay-mIURjj[4:oft7j[~p%Mofay")}
-              />
-            </a>
-          </Slide>
-          <Slide>
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/09-movie-receipt.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV09Image}
-                alt="Movie Vertical Receipt Page"
-                height={400}
-                width={400 * aspect(MV09Image)}
-                style={blurhash("U3S$ow00s8%MIq_3~pWB9Gt8?GWV9FWBj[Rj")}
-              />
-            </a>
-          </Slide>
-          <Slide>
-            <a
-              class="flex items-center justify-center"
-              href={`${import.meta.env.BASE_URL}/mv/10-movie-ticket.jpg`}
-            >
-              <Image
-                class="rounded-md screen:shadow-md"
-                src={MV10Image}
-                alt="Movie Vertical Ticket Page"
-                height={400}
-                width={400 * aspect(MV10Image)}
-                style={blurhash("UBR:HG00D%oL-;ozWBj@~q~q-;ofD%IURjf6")}
-              />
-            </a>
-          </Slide>
-        </CarouselContainer>
-
-        <div
-          class="absolute bottom-0 left-0 top-0 my-auto hidden items-center bg-gradient-to-r from-treehouse-50 to-transparent screen:script:flex"
-        >
-          <CarouselButton type="prev" />
-        </div>
-        <div
-          class="absolute bottom-0 right-0 top-0 my-auto hidden items-center bg-gradient-to-l from-treehouse-50 to-transparent screen:script:flex"
-        >
-          <CarouselButton type="next" />
-        </div>
-      </Carousel>
-    </HistoryItem>
-
-    <HistoryItem name="blu by BCA Digital" desc="Feb 2020 – Apr 2024">
-      <p
-        class="break-before-avoid-page pb-1 text-justify text-sm text-tapa-500"
-      >
-        I spearheaded a cross-platform mobile application that enables our bank
-        partner, BCA Digital, to provide comprehensive and complete digital
-        banking services. Traditionally, banking requires on-site visits to
-        banking establishments to open a bank account and do large transactions.
-        The services eliminate this friction for our customers. Some financial
-        services offered includes shared savings accounts, time deposit
-        accounts, transfers, bill payments, and e-money top-ups.
-      </p>
-      <p
-        class="break-before-avoid-page pb-1 text-justify indent-4 text-sm text-tapa-500"
-      >
-        Early in the development cycle, I was in charge of some of the earliest
-        modules in the application, such as customer registration, multi-factor
-        authentication, and online transfer. I also work on the application's
-        reward system, video call integration for the KYC process, and
-        application interface redesign.
-      </p>
-      <p
-        class="break-before-avoid-page pb-1 text-justify indent-4 text-sm text-tapa-500"
-      >
-        The application utilizes the React Native framework, Redux (with Redux
-        Saga middleware), a custom HTTP client that enables SSL Pinning, React
-        I18n, React Navigation, React Hook Form, and extensive use of CSS-in-JS
-        library using Styled System. The majority of the code is written in
-        TypeScript for type safety. A smaller portion of native mobile code is
-        written in Java on Android and Objective-C/Swift on iOS to interface
-        directly with third-party native SDK.
-      </p>
-      <p class="pb-1 text-justify indent-4 text-sm text-tapa-500">
-        The application is available for download through the Google Play Store
-        and Apple App Store. The application has seen substantial user adoption
-        and satisfaction, and the trend will likely continue.
-      </p>
-    </HistoryItem>
-
-    <Carousel class="-my-4 break-before-avoid-page py-4">
+    <Carousel class="py-2">
       <CarouselContainer
-        class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_1fr_2fr_1fr_1fr_1fr_1fr_2fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
+        class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_2fr_1fr_1fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
       >
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/01-landing.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/01-lifestyle-home.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU01Image}
-              alt="blu by BCA Landing Page"
+              src={MV01Image}
+              alt="mBCA Lifestyle Home Page"
               height={400}
-              width={400 * aspect(BLU01Image)}
-              style={blurhash("UBCK3TWBCQtk2Boz+^V@_Noyq^V@DORjcEtR")}
+              width={400 * aspect(MV01Image)}
+              style={blurhash("UJP@6HD*RkkC0LRks:of~UIVM|j[V[IoNGj[")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/02-prelogin.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/02-movie-landing.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU02Image}
-              alt="blu by BCA Prelogin Page"
+              src={MV02Image}
+              alt="Movie Vertical Landing Page"
               height={400}
-              width={400 * aspect(BLU02Image)}
-              style={blurhash("U@Nv}mjZx[j[xUWBWCjt?wWVRjay%KjtWBa{")}
+              width={400 * aspect(MV02Image)}
+              style={blurhash("UTR3We00t7?bt7t7a}Rk~q^+ayIUM{RjfQoL")}
             />
           </a>
         </Slide>
         <Slide class="row-span-2">
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/03-home.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/03-movie-detail-cover.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU03Image}
-              alt="blu by BCA Home Page"
+              src={MV03Image}
+              alt="Movie Vertical Detail Page"
               height={400}
-              width={400 * aspect(BLU03Image)}
-              style={blurhash("U5QAU0*DIX^m0vHw9Z%b00Tnx]8}3yDSJ5O8")}
+              width={400 * aspect(MV03Image)}
+              style={blurhash("UdFr|vj[bIae%gj?ayj[~qogjYozIokCoLkC")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/04-transaction-sheet.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/04-movie-detail-cinemas.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU04Image}
-              alt="blu by BCA Transaction Sheet Page"
+              src={MV04Image}
+              alt="Movie Vertical Cinemas Page"
               height={400}
-              width={400 * aspect(BLU04Image)}
-              style={blurhash("U4OgWz9b~n-o00xo4qR-00V{R:WA03bI%FV@")}
+              width={400 * aspect(MV04Image)}
+              style={blurhash("UxLXY:j[fkj[00j[j[j[~qayjZj[.8j[j[az")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/05-transfer-destination-list.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/05-movie-time.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU05Image}
-              alt="blu by BCA Transfer Destination List Page"
+              src={MV05Image}
+              alt="Movie Vertical Time Page"
               height={400}
-              width={400 * aspect(BLU05Image)}
-              style={blurhash("UASF@X9ay9o#~S$*DnaeRYxZ-#jY?qR%9Joy")}
-            />
-          </a>
-        </Slide>
-        <Slide>
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/06-transfer-detail.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={BLU06Image}
-              alt="blu by BCA Transfer Detail Page"
-              height={400}
-              width={400 * aspect(BLU06Image)}
-              style={blurhash("UJS6Puax%Ij^~iayIWj[D?j]WCj=?TofRkaf")}
-            />
-          </a>
-        </Slide>
-        <Slide>
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/07-flazz-nfc-scan.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={BLU07Image}
-              alt="blu by BCA Flazz NFC Scan Page"
-              height={400}
-              width={400 * aspect(BLU07Image)}
-              style={blurhash("UWLN.6j[xZay00ayWCayaxayazj[~qayt6j[")}
+              width={400 * aspect(MV05Image)}
+              style={blurhash("U2Ss500000RO000000IA9FIUozM{^+~q_Nx]")}
             />
           </a>
         </Slide>
         <Slide class="row-span-2">
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/08-gift-card-design.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/06-movie-seat-unselected.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU08Image}
-              alt="blu by BCA Gift Card Design Page"
+              src={MV06Image}
+              alt="Movie Vertical Seat Unselected Page"
               height={400}
-              width={400 * aspect(BLU08Image)}
-              style={blurhash("UlNwc=WBx]a#-.j@V[ay~qflVsj@xRayWEja")}
+              width={400 * aspect(MV06Image)}
+              style={blurhash("UORMb,Rjt6ju_1WBRkj[0Mfks:fk~Vofbbf6")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/09-subaccount-creation.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/07-movie-seat-selected.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU09Image}
-              alt="blu by BCA Subaccount Creation Page"
+              src={MV07Image}
+              alt="Movie Vertical Seat Selected Page"
               height={400}
-              width={400 * aspect(BLU09Image)}
-              style={blurhash("UZRns7WBxYofujj[V^ay8yoft6af?[ayR.oL")}
+              width={400 * aspect(MV07Image)}
+              style={blurhash("UKRC[At7%LR-_0ofofWV02RjjZs:~URjNGs:")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/10-settings.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/08-movie-checkout.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU10Image}
-              alt="blu by BCA Settings Page"
+              src={MV08Image}
+              alt="Movie Vertical Checkout Page"
               height={400}
-              width={400 * aspect(BLU10Image)}
-              style={blurhash("U3Ss884n9tXS-VadVrsT^*Nx%Mof_N^+E1R+")}
+              width={400 * aspect(MV08Image)}
+              style={blurhash("UUQ,RKD%M{ay-mIURjj[4:oft7j[~p%Mofay")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/11-profile.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/09-movie-receipt.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU11Image}
-              alt="blu by BCA Profile Page"
+              src={MV09Image}
+              alt="Movie Vertical Receipt Page"
               height={400}
-              width={400 * aspect(BLU11Image)}
-              style={blurhash("U4S$ovD%-;t7_3xtf6j[IUj[Rjay~qof4nWB")}
+              width={400 * aspect(MV09Image)}
+              style={blurhash("U3S$ow00s8%MIq_3~pWB9Gt8?GWV9FWBj[Rj")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/12-update-address.jpg`}
+            href={`${import.meta.env.BASE_URL}/mv/10-movie-ticket.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={BLU12Image}
-              alt="blu by BCA Update Address Page"
+              src={MV10Image}
+              alt="Movie Vertical Ticket Page"
               height={400}
-              width={400 * aspect(BLU12Image)}
-              style={blurhash("UFRMe|jFxst7-woLIXfk0Bj]xsj[~jofM|oL")}
-            />
-          </a>
-        </Slide>
-        <Slide>
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/13-referral.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={BLU13Image}
-              alt="blu by BCA Referral Page"
-              height={400}
-              width={400 * aspect(BLU13Image)}
-              style={blurhash("UWQAHsae?aoL~6bHbwa}9ioeoHay_0jZD*j[")}
-            />
-          </a>
-        </Slide>
-        <Slide>
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/14-proxy-address.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={BLU14Image}
-              alt="blu by BCA Proxy Address Page"
-              height={400}
-              width={400 * aspect(BLU14Image)}
-              style={blurhash("U5Ss8A03-:~m?T%GIVM+-%--RkIWRrRWM{xp")}
-            />
-          </a>
-        </Slide>
-        <Slide>
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/15-biometrics.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={BLU15Image}
-              alt="blu by BCA Biometrics Page"
-              height={400}
-              width={400 * aspect(BLU15Image)}
-              style={blurhash("UCQ^2LM{~qtQ0JofWBayTvWV00ax0ws:Rjj[")}
-            />
-          </a>
-        </Slide>
-        <Slide>
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/16-tracker-and-history.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={BLU16Image}
-              alt="blu by BCA Tracker and History Page"
-              height={400}
-              width={400 * aspect(BLU16Image)}
-              style={blurhash("U4R3sG~K%29i0c97ix?T00~QSK9g00D@n$x,")}
-            />
-          </a>
-        </Slide>
-        <Slide class="row-span-2">
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/blu/17-promotions-swiper.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={BLU17Image}
-              alt="blu by BCA Promotions Swiper Page"
-              height={400}
-              width={400 * aspect(BLU17Image)}
-              style={blurhash("U78gz0=}0e0M#QVsTKJ8NFInRisl0fIp~B^*")}
+              width={400 * aspect(MV10Image)}
+              style={blurhash("UBR:HG00D%oL-;ozWBj@~q~q-;ofD%IURjf6")}
             />
           </a>
         </Slide>
@@ -555,5 +227,300 @@ import CarouselContainer from "./carousel-container.astro";
         <CarouselButton type="next" />
       </div>
     </Carousel>
-  </HistorySection>
-</section>
+  </HistoryItem>
+
+  <HistoryItem name="blu by BCA Digital" desc="Feb 2020 – Apr 2024">
+    <p class="pb-2 text-justify text-sm text-tapa-500">
+      <b> Scope: </b>
+      Spearheaded the development of a cross-platform mobile application from scratch
+      for BCA Digital, providing comprehensive digital banking services. Key features
+      include in-app customer registration, multi-factor authentication, online transfers,
+      time deposits, a reward system, and KYC integration via video calls.
+    </p>
+    <p class="pb-2 text-justify text-sm text-tapa-500">
+      <b>Impact:</b>
+      Streamlined traditional banking processes, significantly increasing user adoption
+      and satisfaction. The app is available on both Google Play Store and Apple
+      App Store.
+    </p>
+    <p class="pb-2 text-justify text-sm text-tapa-500">
+      <b> Tech Stack:</b>
+      React Native, Redux + Saga middleware, TypeScript, SSL Pinning, React I18n,
+      React Navigation, Styled System, Java/Kotlin (Android), Objective-C/Swift (iOS),
+      Firebase, and other third-party integrations.
+    </p>
+  </HistoryItem>
+
+  <Carousel class="-my-4 py-4">
+    <CarouselContainer
+      class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_1fr_2fr_1fr_1fr_1fr_1fr_2fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
+    >
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/01-landing.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU01Image}
+            alt="blu by BCA Landing Page"
+            height={400}
+            width={400 * aspect(BLU01Image)}
+            style={blurhash("UBCK3TWBCQtk2Boz+^V@_Noyq^V@DORjcEtR")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/02-prelogin.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU02Image}
+            alt="blu by BCA Prelogin Page"
+            height={400}
+            width={400 * aspect(BLU02Image)}
+            style={blurhash("U@Nv}mjZx[j[xUWBWCjt?wWVRjay%KjtWBa{")}
+          />
+        </a>
+      </Slide>
+      <Slide class="row-span-2">
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/03-home.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU03Image}
+            alt="blu by BCA Home Page"
+            height={400}
+            width={400 * aspect(BLU03Image)}
+            style={blurhash("U5QAU0*DIX^m0vHw9Z%b00Tnx]8}3yDSJ5O8")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/04-transaction-sheet.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU04Image}
+            alt="blu by BCA Transaction Sheet Page"
+            height={400}
+            width={400 * aspect(BLU04Image)}
+            style={blurhash("U4OgWz9b~n-o00xo4qR-00V{R:WA03bI%FV@")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/05-transfer-destination-list.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU05Image}
+            alt="blu by BCA Transfer Destination List Page"
+            height={400}
+            width={400 * aspect(BLU05Image)}
+            style={blurhash("UASF@X9ay9o#~S$*DnaeRYxZ-#jY?qR%9Joy")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/06-transfer-detail.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU06Image}
+            alt="blu by BCA Transfer Detail Page"
+            height={400}
+            width={400 * aspect(BLU06Image)}
+            style={blurhash("UJS6Puax%Ij^~iayIWj[D?j]WCj=?TofRkaf")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/07-flazz-nfc-scan.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU07Image}
+            alt="blu by BCA Flazz NFC Scan Page"
+            height={400}
+            width={400 * aspect(BLU07Image)}
+            style={blurhash("UWLN.6j[xZay00ayWCayaxayazj[~qayt6j[")}
+          />
+        </a>
+      </Slide>
+      <Slide class="row-span-2">
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/08-gift-card-design.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU08Image}
+            alt="blu by BCA Gift Card Design Page"
+            height={400}
+            width={400 * aspect(BLU08Image)}
+            style={blurhash("UlNwc=WBx]a#-.j@V[ay~qflVsj@xRayWEja")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/09-subaccount-creation.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU09Image}
+            alt="blu by BCA Subaccount Creation Page"
+            height={400}
+            width={400 * aspect(BLU09Image)}
+            style={blurhash("UZRns7WBxYofujj[V^ay8yoft6af?[ayR.oL")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/10-settings.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU10Image}
+            alt="blu by BCA Settings Page"
+            height={400}
+            width={400 * aspect(BLU10Image)}
+            style={blurhash("U3Ss884n9tXS-VadVrsT^*Nx%Mof_N^+E1R+")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/11-profile.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU11Image}
+            alt="blu by BCA Profile Page"
+            height={400}
+            width={400 * aspect(BLU11Image)}
+            style={blurhash("U4S$ovD%-;t7_3xtf6j[IUj[Rjay~qof4nWB")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/12-update-address.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU12Image}
+            alt="blu by BCA Update Address Page"
+            height={400}
+            width={400 * aspect(BLU12Image)}
+            style={blurhash("UFRMe|jFxst7-woLIXfk0Bj]xsj[~jofM|oL")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/13-referral.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU13Image}
+            alt="blu by BCA Referral Page"
+            height={400}
+            width={400 * aspect(BLU13Image)}
+            style={blurhash("UWQAHsae?aoL~6bHbwa}9ioeoHay_0jZD*j[")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/14-proxy-address.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU14Image}
+            alt="blu by BCA Proxy Address Page"
+            height={400}
+            width={400 * aspect(BLU14Image)}
+            style={blurhash("U5Ss8A03-:~m?T%GIVM+-%--RkIWRrRWM{xp")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/15-biometrics.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU15Image}
+            alt="blu by BCA Biometrics Page"
+            height={400}
+            width={400 * aspect(BLU15Image)}
+            style={blurhash("UCQ^2LM{~qtQ0JofWBayTvWV00ax0ws:Rjj[")}
+          />
+        </a>
+      </Slide>
+      <Slide>
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/16-tracker-and-history.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU16Image}
+            alt="blu by BCA Tracker and History Page"
+            height={400}
+            width={400 * aspect(BLU16Image)}
+            style={blurhash("U4R3sG~K%29i0c97ix?T00~QSK9g00D@n$x,")}
+          />
+        </a>
+      </Slide>
+      <Slide class="row-span-2">
+        <a
+          class="flex items-center justify-center"
+          href={`${import.meta.env.BASE_URL}/blu/17-promotions-swiper.jpg`}
+        >
+          <Image
+            class="rounded-md screen:shadow-md"
+            src={BLU17Image}
+            alt="blu by BCA Promotions Swiper Page"
+            height={400}
+            width={400 * aspect(BLU17Image)}
+            style={blurhash("U78gz0=}0e0M#QVsTKJ8NFInRisl0fIp~B^*")}
+          />
+        </a>
+      </Slide>
+    </CarouselContainer>
+
+    <div
+      class="absolute bottom-0 left-0 top-0 my-auto hidden items-center bg-gradient-to-r from-treehouse-50 to-transparent screen:script:flex"
+    >
+      <CarouselButton type="prev" />
+    </div>
+    <div
+      class="absolute bottom-0 right-0 top-0 my-auto hidden items-center bg-gradient-to-l from-treehouse-50 to-transparent screen:script:flex"
+    >
+      <CarouselButton type="next" />
+    </div>
+  </Carousel>
+</HistorySection>

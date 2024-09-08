@@ -9,7 +9,7 @@ interface Props {
 }
 ---
 
-<section class={twMerge("flex flex-col gap-6", Astro.props.class)}>
+<div class={twMerge("flex flex-col gap-6", Astro.props.class)}>
   <HistorySection class="mb-4 flex flex-col gap-4" legend="Education">
     <HistoryItem
       name="Yoshida Institute of Japanese Language"
@@ -75,4 +75,4 @@ interface Props {
       info="Developing dormitory managemenet system with Laravel"
     />
   </HistorySection>
-</section>
+</div>
