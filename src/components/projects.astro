@@ -25,6 +25,16 @@ import BLU14Image from "../../public/blu/14-proxy-address.jpg";
 import BLU15Image from "../../public/blu/15-biometrics.jpg";
 import BLU16Image from "../../public/blu/16-tracker-and-history.jpg";
 import BLU17Image from "../../public/blu/17-promotions-swiper.jpg";
+import GT01Image from "../../public/gt/01-login.jpg";
+import GT02Image from "../../public/gt/02-order-create.jpg";
+import GT03Image from "../../public/gt/03-order-list.jpg";
+import GT04Image from "../../public/gt/04-order-fulfilment.jpg";
+import GT05Image from "../../public/gt/05-item-list.jpg";
+import GT06Image from "../../public/gt/06-item-detail.jpg";
+import GT07Image from "../../public/gt/07-manufacturing-production.jpg";
+import GT08Image from "../../public/gt/08-stock-adjustment.jpg";
+import GT09Image from "../../public/gt/09-account-detail.jpg";
+import GT10Image from "../../public/gt/10-organization-detail-modal.jpg";
 import MV01Image from "../../public/mv/01-lifestyle-home.jpg";
 import MV02Image from "../../public/mv/02-movie-landing.jpg";
 import MV03Image from "../../public/mv/03-movie-detail-cover.jpg";
@@ -43,174 +53,176 @@ import CarouselContainer from "./carousel-container.astro";
   class={twMerge("flex flex-col gap-4", Astro.props.class)}
   legend="Work Projects"
 >
-  <HistoryItem name="BCA Lifestyle: Movie Vertical" desc="Nov 2019 – Apr 2020">
-    <p class="pb-2 text-justify text-sm text-tapa-500">
+  <HistoryItem name="Greentech ERP" desc="Jun 2024 – Present">
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
       <b> Scope: </b>
-      Developed and integrated the movie ticket vertical within a digital banking
-      app, working with a three-person front-end team and coordinating with cross-functional
-      teams.
+      Ongoing freelance project developing an enterprise resource planning system
+      to manage inventory, manufacturing, BOMs, and clerical tasks. The system tracks
+      orders, purchase orders, sales orders, and delivery orders for manufacturer,
+      distributor and dealer.
     </p>
-    <p class="pb-2 text-justify text-sm text-tapa-500">
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
       <b>Impact:</b>
-      Enabled seamless movie ticket purchases, seat selection, and e-ticket viewing.
-      Completed the project in six months.
+      Automated inventory management, replacing manual processes and significantly
+      improving efficiency.
     </p>
-    <p class="pb-2 text-justify text-sm text-tapa-500">
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
       <b> Tech Stack:</b>
-      React, Redux + Thunk middleware, React Router, Axios, Webpack, REST APIs.
+      TypeScript, NextJS, Mantine, tRPC, Tanstack Query, Drizzle ORM, PostgreSQL,
+      Vite.
     </p>
 
     <Carousel class="py-2">
       <CarouselContainer
-        class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_2fr_1fr_1fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
+        class="grid grid-cols-5 grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
       >
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/01-lifestyle-home.jpg`}
+            href={`${import.meta.env.BASE_URL}/gt/01-login.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={MV01Image}
-              alt="mBCA Lifestyle Home Page"
+              src={GT01Image}
+              alt="Greentech ERP Login Page"
               height={400}
-              width={400 * aspect(MV01Image)}
-              style={blurhash("UJP@6HD*RkkC0LRks:of~UIVM|j[V[IoNGj[")}
+              width={400 * aspect(GT01Image)}
+              style={blurhash("U9S?Gcof~Xj[V]j[oyay-;jtE0j[klWBaOof")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/02-movie-landing.jpg`}
+            href={`${import.meta.env.BASE_URL}/gt/02-order-create.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={MV02Image}
-              alt="Movie Vertical Landing Page"
+              src={GT02Image}
+              alt="Greentech ERP Order Create Page"
               height={400}
-              width={400 * aspect(MV02Image)}
-              style={blurhash("UTR3We00t7?bt7t7a}Rk~q^+ayIUM{RjfQoL")}
-            />
-          </a>
-        </Slide>
-        <Slide class="row-span-2">
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/03-movie-detail-cover.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={MV03Image}
-              alt="Movie Vertical Detail Page"
-              height={400}
-              width={400 * aspect(MV03Image)}
-              style={blurhash("UdFr|vj[bIae%gj?ayj[~qogjYozIokCoLkC")}
+              width={400 * aspect(GT02Image)}
+              style={blurhash("U2S$u=^+0c-q-q00$+D~Im$,4nxI-DD$xJWU")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/04-movie-detail-cinemas.jpg`}
+            href={`${import.meta.env.BASE_URL}/gt/03-order-list.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={MV04Image}
-              alt="Movie Vertical Cinemas Page"
+              src={GT03Image}
+              alt="Greentech ERP Order List Page"
               height={400}
-              width={400 * aspect(MV04Image)}
-              style={blurhash("UxLXY:j[fkj[00j[j[j[~qayjZj[.8j[j[az")}
+              width={400 * aspect(GT03Image)}
+              style={blurhash("U6S?DVklIToz00R$Rij[?IIUogax~XR7kDjZ")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/05-movie-time.jpg`}
+            href={`${import.meta.env.BASE_URL}/gt/04-order-fulfilment.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={MV05Image}
-              alt="Movie Vertical Time Page"
+              src={GT04Image}
+              alt="Greentech ERP Order Fulfilment Page"
               height={400}
-              width={400 * aspect(MV05Image)}
-              style={blurhash("U2Ss500000RO000000IA9FIUozM{^+~q_Nx]")}
-            />
-          </a>
-        </Slide>
-        <Slide class="row-span-2">
-          <a
-            class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/06-movie-seat-unselected.jpg`}
-          >
-            <Image
-              class="rounded-md screen:shadow-md"
-              src={MV06Image}
-              alt="Movie Vertical Seat Unselected Page"
-              height={400}
-              width={400 * aspect(MV06Image)}
-              style={blurhash("UORMb,Rjt6ju_1WBRkj[0Mfks:fk~Vofbbf6")}
+              width={400 * aspect(GT04Image)}
+              style={blurhash("U1S$ovEd0vpal:00XU5hzT^n56~X^S9Z?0R%")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/07-movie-seat-selected.jpg`}
+            href={`${import.meta.env.BASE_URL}/gt/05-item-list.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={MV07Image}
-              alt="Movie Vertical Seat Selected Page"
+              src={GT05Image}
+              alt="Greentech ERP Item List Page"
               height={400}
-              width={400 * aspect(MV07Image)}
-              style={blurhash("UKRC[At7%LR-_0ofofWV02RjjZs:~URjNGs:")}
+              width={400 * aspect(GT05Image)}
+              style={blurhash("U4SsBGF;DgpIIn9YInRi~qR6Nxa0j0t8n+og")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/08-movie-checkout.jpg`}
+            href={`${import.meta.env.BASE_URL}/gt/06-item-detail.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={MV08Image}
-              alt="Movie Vertical Checkout Page"
+              src={GT06Image}
+              alt="Greentech ERP Item Detail Page"
               height={400}
-              width={400 * aspect(MV08Image)}
-              style={blurhash("UUQ,RKD%M{ay-mIURjj[4:oft7j[~p%Mofay")}
+              width={400 * aspect(GT06Image)}
+              style={blurhash("U0T9L#00005g0000009X?J-XMz~XIUIBsps;")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/09-movie-receipt.jpg`}
+            href={`${import.meta.env.BASE_URL}/gt/07-manufacturing-production.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={MV09Image}
-              alt="Movie Vertical Receipt Page"
+              src={GT07Image}
+              alt="Greentech ERP Manufacturing Production Page"
               height={400}
-              width={400 * aspect(MV09Image)}
-              style={blurhash("U3S$ow00s8%MIq_3~pWB9Gt8?GWV9FWBj[Rj")}
+              width={400 * aspect(GT07Image)}
+              style={blurhash("U1S?Gc5P00l7.800Ne00?H^nD%^nMMEK-DOn")}
             />
           </a>
         </Slide>
         <Slide>
           <a
             class="flex items-center justify-center"
-            href={`${import.meta.env.BASE_URL}/mv/10-movie-ticket.jpg`}
+            href={`${import.meta.env.BASE_URL}/gt/08-stock-adjustment.jpg`}
           >
             <Image
               class="rounded-md screen:shadow-md"
-              src={MV10Image}
-              alt="Movie Vertical Ticket Page"
+              src={GT08Image}
+              alt="Greentech ERP Stock Adjustment Page"
               height={400}
-              width={400 * aspect(MV10Image)}
-              style={blurhash("UBR:HG00D%oL-;ozWBj@~q~q-;ofD%IURjf6")}
+              width={400 * aspect(GT08Image)}
+              style={blurhash("U2S?GcI-0Jb]IU0JNG9Y~qVuNH$+4n%Na1.8")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/gt/09-account-detail.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={GT09Image}
+              alt="Greentech ERP Account Detail Page"
+              height={400}
+              width={400 * aspect(GT09Image)}
+              style={blurhash("U2S~x6I+00tc00D%ITW-~VIa%2V}xu%09Gxt")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/gt/10-organization-detail-modal.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={GT10Image}
+              alt="Greentech ERP Organization Detail Modal Page"
+              height={400}
+              width={400 * aspect(GT10Image)}
+              style={blurhash("UDDS:taz00ae~qj[4nWA_2ay9Ff6%MjtM_j[")}
             />
           </a>
         </Slide>
@@ -230,24 +242,24 @@ import CarouselContainer from "./carousel-container.astro";
   </HistoryItem>
 
   <HistoryItem name="blu by BCA Digital" desc="Feb 2020 – Apr 2024">
-    <p class="pb-2 text-justify text-sm text-tapa-500">
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
       <b> Scope: </b>
       Spearheaded the development of a cross-platform mobile application from scratch
       for BCA Digital, providing comprehensive digital banking services. Key features
       include in-app customer registration, multi-factor authentication, online transfers,
       time deposits, a reward system, and KYC integration via video calls.
     </p>
-    <p class="pb-2 text-justify text-sm text-tapa-500">
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
       <b>Impact:</b>
       Streamlined traditional banking processes, significantly increasing user adoption
       and satisfaction. The app is available on both Google Play Store and Apple
       App Store.
     </p>
-    <p class="pb-2 text-justify text-sm text-tapa-500">
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
       <b> Tech Stack:</b>
-      React Native, Redux + Saga middleware, TypeScript, SSL Pinning, React I18n,
-      React Navigation, Styled System, Java/Kotlin (Android), Objective-C/Swift (iOS),
-      Firebase, and other third-party integrations.
+      TypeScript, React Native, Redux + Saga middleware, TypeScript, SSL Pinning,
+      React I18n, React Navigation, Styled System, Java/Kotlin (Android), Objective-C/Swift
+      (iOS), Firebase, and other third-party integrations.
     </p>
   </HistoryItem>
 
@@ -523,4 +535,191 @@ import CarouselContainer from "./carousel-container.astro";
       <CarouselButton type="next" />
     </div>
   </Carousel>
+
+  <HistoryItem name="BCA Lifestyle: Movie Vertical" desc="Nov 2019 – Apr 2020">
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
+      <b> Scope: </b>
+      Developed and integrated the movie ticket vertical within a digital banking
+      app, working with a three-person front-end team and coordinating with cross-functional
+      teams.
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
+      <b>Impact:</b>
+      Enabled seamless movie ticket purchases, seat selection, and e-ticket viewing.
+      Completed the project in six months.
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-500">
+      <b> Tech Stack:</b>
+      JavaScript, React, Redux + Thunk middleware, React Router, Axios, Webpack,
+      REST APIs.
+    </p>
+
+    <Carousel class="py-2">
+      <CarouselContainer
+        class="grid grid-flow-col grid-cols-10 gap-0.5 screen:script:flex screen:script:gap-2"
+      >
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/01-lifestyle-home.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV01Image}
+              alt="mBCA Lifestyle Home Page"
+              height={400}
+              width={400 * aspect(MV01Image)}
+              style={blurhash("UJP@6HD*RkkC0LRks:of~UIVM|j[V[IoNGj[")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/02-movie-landing.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV02Image}
+              alt="Movie Vertical Landing Page"
+              height={400}
+              width={400 * aspect(MV02Image)}
+              style={blurhash("UTR3We00t7?bt7t7a}Rk~q^+ayIUM{RjfQoL")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/03-movie-detail-cover.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV03Image}
+              alt="Movie Vertical Detail Page"
+              height={400}
+              width={400 * aspect(MV03Image)}
+              style={blurhash("UdFr|vj[bIae%gj?ayj[~qogjYozIokCoLkC")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/04-movie-detail-cinemas.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV04Image}
+              alt="Movie Vertical Cinemas Page"
+              height={400}
+              width={400 * aspect(MV04Image)}
+              style={blurhash("UxLXY:j[fkj[00j[j[j[~qayjZj[.8j[j[az")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/05-movie-time.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV05Image}
+              alt="Movie Vertical Time Page"
+              height={400}
+              width={400 * aspect(MV05Image)}
+              style={blurhash("U2Ss500000RO000000IA9FIUozM{^+~q_Nx]")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/06-movie-seat-unselected.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV06Image}
+              alt="Movie Vertical Seat Unselected Page"
+              height={400}
+              width={400 * aspect(MV06Image)}
+              style={blurhash("UORMb,Rjt6ju_1WBRkj[0Mfks:fk~Vofbbf6")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/07-movie-seat-selected.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV07Image}
+              alt="Movie Vertical Seat Selected Page"
+              height={400}
+              width={400 * aspect(MV07Image)}
+              style={blurhash("UKRC[At7%LR-_0ofofWV02RjjZs:~URjNGs:")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/08-movie-checkout.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV08Image}
+              alt="Movie Vertical Checkout Page"
+              height={400}
+              width={400 * aspect(MV08Image)}
+              style={blurhash("UUQ,RKD%M{ay-mIURjj[4:oft7j[~p%Mofay")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/09-movie-receipt.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV09Image}
+              alt="Movie Vertical Receipt Page"
+              height={400}
+              width={400 * aspect(MV09Image)}
+              style={blurhash("U3S$ow00s8%MIq_3~pWB9Gt8?GWV9FWBj[Rj")}
+            />
+          </a>
+        </Slide>
+        <Slide>
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/mv/10-movie-ticket.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={MV10Image}
+              alt="Movie Vertical Ticket Page"
+              height={400}
+              width={400 * aspect(MV10Image)}
+              style={blurhash("UBR:HG00D%oL-;ozWBj@~q~q-;ofD%IURjf6")}
+            />
+          </a>
+        </Slide>
+      </CarouselContainer>
+
+      <div
+        class="absolute bottom-0 left-0 top-0 my-auto hidden items-center bg-gradient-to-r from-treehouse-50 to-transparent screen:script:flex"
+      >
+        <CarouselButton type="prev" />
+      </div>
+      <div
+        class="absolute bottom-0 right-0 top-0 my-auto hidden items-center bg-gradient-to-l from-treehouse-50 to-transparent screen:script:flex"
+      >
+        <CarouselButton type="next" />
+      </div>
+    </Carousel>
+  </HistoryItem>
 </HistorySection>
