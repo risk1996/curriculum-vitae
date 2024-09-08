@@ -1,5 +1,6 @@
 ---
 import { twMerge } from "tailwind-merge";
+import Collapsible from "./collapsible.astro";
 import HistoryItem from "./hisotry-item.astro";
 import HistorySection from "./history-section.astro";
 
@@ -41,21 +42,24 @@ interface Props {
       desc="Sep 2018 | HAINA Networking Certification"
       info="Test No: H12-211"
     />
-    <HistoryItem
-      name="Huawei Routing & Switching Competition Winner"
-      desc="Dec 2018 | Local Competition | 1st Place"
-      info="Prize: Trip to Huawei HQ at Shenzhen, China"
-    />
-    <HistoryItem
-      name="XL Business Solution IoT Hackathon Winner"
-      desc="Sep 2018 | National Competition | 3rd Place"
-      info="Prize: IDR 2.500.000"
-    />
-    <HistoryItem
-      name="Study Visit Participant to RFH Köln, Germany"
-      desc="Apr 2019 | Study Visits by Groups of Foreign Students, by DAAD"
-      info="Prize: 12-day trip to Köln"
-    />
+
+    <Collapsible class="-mt-1 print:hidden" legend="More">
+      <HistoryItem
+        name="Huawei Routing & Switching Competition Winner"
+        desc="Dec 2018 | Local Competition | 1st Place"
+        info="Prize: Trip to Huawei HQ at Shenzhen, China"
+      />
+      <HistoryItem
+        name="XL Business Solution IoT Hackathon Winner"
+        desc="Sep 2018 | National Competition | 3rd Place"
+        info="Prize: IDR 2.500.000"
+      />
+      <HistoryItem
+        name="Study Visit Participant to RFH Köln, Germany"
+        desc="Apr 2019 | Study Visits by Groups of Foreign Students, by DAAD"
+        info="Prize: 12-day trip to Köln"
+      />
+    </Collapsible>
   </HistorySection>
 
   <HistorySection class="mb-4 flex flex-col gap-4" legend="Work Experience">
@@ -64,10 +68,13 @@ interface Props {
       desc="Aug 2019 – Mar 2023 | PT Dwi Cermat Indonesia (Cermati.com)"
       info="Worked on the digitization of financial services and as a super-app enabler for banks"
     />
-    <HistoryItem
-      name="Full Stack Web Developer Intern"
-      desc="Jul 2018 – Jan 2019 | Frisidea Tech"
-      info="Developing dormitory managemenet system with Laravel"
-    />
+
+    <Collapsible class="-mt-1 print:hidden" legend="More">
+      <HistoryItem
+        name="Full Stack Web Developer Intern"
+        desc="Jul 2018 – Jan 2019 | Frisidea Tech"
+        info="Developing dormitory managemenet system with Laravel"
+      />
+    </Collapsible>
   </HistorySection>
 </section>

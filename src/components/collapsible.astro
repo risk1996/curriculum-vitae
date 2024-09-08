@@ -1,0 +1,21 @@
+---
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  legend: string;
+  class?: string;
+}
+---
+
+<details
+  class={twMerge("[&[open]>summary:before]:rotate-90", Astro.props.class)}
+>
+  <summary
+    class="relative list-none pl-4 marker:hidden before:absolute before:left-0 before:top-2 before:h-0 before:w-0 before:border-b-4 before:border-l-8 before:border-t-4 before:border-b-transparent before:border-l-tapa-600 before:border-t-transparent before:transition-transform before:content-[''] [&::-webkit-details-marker]:hidden"
+  >
+    <span class="text-sm text-tapa-600"> {Astro.props.legend} </span>
+  </summary>
+  <div class="transition-height flex flex-col gap-4 overflow-hidden pt-2">
+    <slot />
+  </div>
+</details>
