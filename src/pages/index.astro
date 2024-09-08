@@ -11,7 +11,7 @@ import Layout from "../layout.astro";
 ---
 
 <Layout title="William Darian's Curriculum Vitae">
-  <div class="grid max-w-screen-lg grid-cols-12 gap-4 self-center">
+  <main class="grid max-w-screen-lg grid-cols-12 gap-4 self-center">
     <div class="col-span-8">
       <div class="flex self-start">
         <Ribbon class="-mt-10 h-[200px] w-[48px]" />
@@ -25,11 +25,11 @@ import Layout from "../layout.astro";
 
     <div class="col-span-4">
       <Profile class="-mt-10" />
-      <Sidebar class="mt-8" />
+      <Sidebar class="mt-6" />
     </div>
 
     <Projects class="col-span-12" />
-  </div>
+  </main>
 
   <Footer class="mt-8" />
 </Layout>
