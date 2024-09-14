@@ -10,6 +10,23 @@ interface Props {
 ---
 
 <div class={twMerge("flex flex-col gap-6", Astro.props.class)}>
+  <HistorySection
+    class="mb-4 flex flex-col gap-4"
+    legend="Professional Experience"
+  >
+    <HistoryItem
+      name="Principal Software Engineer"
+      desc="Aug 2019 – Mar 2024 | PT Dwi Cermat Indonesia (Cermati.com)"
+      info="Worked on the digitization of financial services and as a super-app enabler for banks"
+    />
+
+    <HistoryItem
+      name="Full Stack Web Developer Intern"
+      desc="Jul 2018 – Jan 2019 | Frisidea Tech"
+      info="Developing dormitory management system with Laravel"
+    />
+  </HistorySection>
+
   <HistorySection class="mb-4 flex flex-col gap-4" legend="Education">
     <HistoryItem
       name="Yoshida Institute of Japanese Language"
@@ -60,19 +77,5 @@ interface Props {
         info="Prize: 12-day trip to Köln"
       />
     </Collapsible>
-  </HistorySection>
-
-  <HistorySection class="mb-4 flex flex-col gap-4" legend="Work Experience">
-    <HistoryItem
-      name="Principal Software Engineer"
-      desc="Aug 2019 – Mar 2024 | PT Dwi Cermat Indonesia (Cermati.com)"
-      info="Worked on the digitization of financial services and as a super-app enabler for banks"
-    />
-
-    <HistoryItem
-      name="Full Stack Web Developer Intern"
-      desc="Jul 2018 – Jan 2019 | Frisidea Tech"
-      info="Developing dormitory management system with Laravel"
-    />
   </HistorySection>
 </div>
