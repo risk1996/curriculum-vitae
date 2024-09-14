@@ -3,10 +3,12 @@ import { Image } from "astro:assets";
 import { twMerge } from "tailwind-merge";
 
 import { aspect, blurhash } from "../helpers/image";
+import CarouselButton from "./carousel-button.astro";
+import CarouselContainer from "./carousel-container.astro";
+import CarouselSlide from "./carousel-slide.astro";
 import Carousel from "./carousel.astro";
 import HistoryItem from "./hisotry-item.astro";
 import HistorySection from "./history-section.astro";
-import Slide from "./slide.astro";
 
 import BLU01Image from "../../public/blu/01-landing.jpg";
 import BLU02Image from "../../public/blu/02-prelogin.jpg";
@@ -45,8 +47,6 @@ import MV07Image from "../../public/mv/07-movie-seat-selected.jpg";
 import MV08Image from "../../public/mv/08-movie-checkout.jpg";
 import MV09Image from "../../public/mv/09-movie-receipt.jpg";
 import MV10Image from "../../public/mv/10-movie-ticket.jpg";
-import CarouselButton from "./carousel-button.astro";
-import CarouselContainer from "./carousel-container.astro";
 ---
 
 <HistorySection
@@ -76,7 +76,7 @@ import CarouselContainer from "./carousel-container.astro";
       <CarouselContainer
         class="grid grid-cols-5 grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
       >
-        <Slide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/01-login.jpg`}
@@ -90,8 +90,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U9S?Gcof~Xj[V]j[oyay-;jtE0j[klWBaOof")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/02-order-create.jpg`}
@@ -105,8 +105,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U2S$u=^+0c-q-q00$+D~Im$,4nxI-DD$xJWU")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/03-order-list.jpg`}
@@ -120,8 +120,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U6S?DVklIToz00R$Rij[?IIUogax~XR7kDjZ")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/04-order-fulfilment.jpg`}
@@ -135,8 +135,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U1S$ovEd0vpal:00XU5hzT^n56~X^S9Z?0R%")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/05-item-list.jpg`}
@@ -150,8 +150,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U4SsBGF;DgpIIn9YInRi~qR6Nxa0j0t8n+og")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/06-item-detail.jpg`}
@@ -165,8 +165,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U0T9L#00005g0000009X?J-XMz~XIUIBsps;")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/07-manufacturing-production.jpg`}
@@ -180,8 +180,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U1S?Gc5P00l7.800Ne00?H^nD%^nMMEK-DOn")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/08-stock-adjustment.jpg`}
@@ -195,8 +195,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U2S?GcI-0Jb]IU0JNG9Y~qVuNH$+4n%Na1.8")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/09-account-detail.jpg`}
@@ -210,8 +210,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U2S~x6I+00tc00D%ITW-~VIa%2V}xu%09Gxt")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/gt/10-organization-detail-modal.jpg`}
@@ -225,7 +225,7 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UDDS:taz00ae~qj[4nWA_2ay9Ff6%MjtM_j[")}
             />
           </a>
-        </Slide>
+        </CarouselSlide>
       </CarouselContainer>
 
       <div
@@ -267,7 +267,7 @@ import CarouselContainer from "./carousel-container.astro";
     <CarouselContainer
       class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_1fr_2fr_1fr_1fr_1fr_1fr_2fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
     >
-      <Slide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/01-landing.jpg`}
@@ -281,8 +281,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UBCK3TWBCQtk2Boz+^V@_Noyq^V@DORjcEtR")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/02-prelogin.jpg`}
@@ -296,8 +296,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("U@Nv}mjZx[j[xUWBWCjt?wWVRjay%KjtWBa{")}
           />
         </a>
-      </Slide>
-      <Slide class="row-span-2">
+      </CarouselSlide>
+      <CarouselSlide class="row-span-2">
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/03-home.jpg`}
@@ -311,8 +311,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("U5QAU0*DIX^m0vHw9Z%b00Tnx]8}3yDSJ5O8")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/04-transaction-sheet.jpg`}
@@ -326,8 +326,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("U4OgWz9b~n-o00xo4qR-00V{R:WA03bI%FV@")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/05-transfer-destination-list.jpg`}
@@ -341,8 +341,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UASF@X9ay9o#~S$*DnaeRYxZ-#jY?qR%9Joy")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/06-transfer-detail.jpg`}
@@ -356,8 +356,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UJS6Puax%Ij^~iayIWj[D?j]WCj=?TofRkaf")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/07-flazz-nfc-scan.jpg`}
@@ -371,8 +371,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UWLN.6j[xZay00ayWCayaxayazj[~qayt6j[")}
           />
         </a>
-      </Slide>
-      <Slide class="row-span-2">
+      </CarouselSlide>
+      <CarouselSlide class="row-span-2">
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/08-gift-card-design.jpg`}
@@ -386,8 +386,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UlNwc=WBx]a#-.j@V[ay~qflVsj@xRayWEja")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/09-subaccount-creation.jpg`}
@@ -401,8 +401,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UZRns7WBxYofujj[V^ay8yoft6af?[ayR.oL")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/10-settings.jpg`}
@@ -416,8 +416,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("U3Ss884n9tXS-VadVrsT^*Nx%Mof_N^+E1R+")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/11-profile.jpg`}
@@ -431,8 +431,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("U4S$ovD%-;t7_3xtf6j[IUj[Rjay~qof4nWB")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/12-update-address.jpg`}
@@ -446,8 +446,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UFRMe|jFxst7-woLIXfk0Bj]xsj[~jofM|oL")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/13-referral.jpg`}
@@ -461,8 +461,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UWQAHsae?aoL~6bHbwa}9ioeoHay_0jZD*j[")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/14-proxy-address.jpg`}
@@ -476,8 +476,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("U5Ss8A03-:~m?T%GIVM+-%--RkIWRrRWM{xp")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/15-biometrics.jpg`}
@@ -491,8 +491,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("UCQ^2LM{~qtQ0JofWBayTvWV00ax0ws:Rjj[")}
           />
         </a>
-      </Slide>
-      <Slide>
+      </CarouselSlide>
+      <CarouselSlide>
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/16-tracker-and-history.jpg`}
@@ -506,8 +506,8 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("U4R3sG~K%29i0c97ix?T00~QSK9g00D@n$x,")}
           />
         </a>
-      </Slide>
-      <Slide class="row-span-2">
+      </CarouselSlide>
+      <CarouselSlide class="row-span-2">
         <a
           class="flex items-center justify-center"
           href={`${import.meta.env.BASE_URL}/blu/17-promotions-swiper.jpg`}
@@ -521,7 +521,7 @@ import CarouselContainer from "./carousel-container.astro";
             style={blurhash("U78gz0=}0e0M#QVsTKJ8NFInRisl0fIp~B^*")}
           />
         </a>
-      </Slide>
+      </CarouselSlide>
     </CarouselContainer>
 
     <div
@@ -558,7 +558,7 @@ import CarouselContainer from "./carousel-container.astro";
       <CarouselContainer
         class="grid grid-flow-col grid-cols-10 gap-0.5 screen:script:flex screen:script:gap-2"
       >
-        <Slide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/01-lifestyle-home.jpg`}
@@ -572,8 +572,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UJP@6HD*RkkC0LRks:of~UIVM|j[V[IoNGj[")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/02-movie-landing.jpg`}
@@ -587,8 +587,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UTR3We00t7?bt7t7a}Rk~q^+ayIUM{RjfQoL")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/03-movie-detail-cover.jpg`}
@@ -602,8 +602,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UdFr|vj[bIae%gj?ayj[~qogjYozIokCoLkC")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/04-movie-detail-cinemas.jpg`}
@@ -617,8 +617,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UxLXY:j[fkj[00j[j[j[~qayjZj[.8j[j[az")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/05-movie-time.jpg`}
@@ -632,8 +632,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U2Ss500000RO000000IA9FIUozM{^+~q_Nx]")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/06-movie-seat-unselected.jpg`}
@@ -647,8 +647,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UORMb,Rjt6ju_1WBRkj[0Mfks:fk~Vofbbf6")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/07-movie-seat-selected.jpg`}
@@ -662,8 +662,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UKRC[At7%LR-_0ofofWV02RjjZs:~URjNGs:")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/08-movie-checkout.jpg`}
@@ -677,8 +677,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UUQ,RKD%M{ay-mIURjj[4:oft7j[~p%Mofay")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/09-movie-receipt.jpg`}
@@ -692,8 +692,8 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("U3S$ow00s8%MIq_3~pWB9Gt8?GWV9FWBj[Rj")}
             />
           </a>
-        </Slide>
-        <Slide>
+        </CarouselSlide>
+        <CarouselSlide>
           <a
             class="flex items-center justify-center"
             href={`${import.meta.env.BASE_URL}/mv/10-movie-ticket.jpg`}
@@ -707,7 +707,7 @@ import CarouselContainer from "./carousel-container.astro";
               style={blurhash("UBR:HG00D%oL-;ozWBj@~q~q-;ofD%IURjf6")}
             />
           </a>
-        </Slide>
+        </CarouselSlide>
       </CarouselContainer>
 
       <div
