@@ -1,10 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
 import { twMerge } from "tailwind-merge";
-
-import PortraitImage from "../../public/portrait.jpg";
-import { blurhash } from "../helpers/image";
 
 interface Props {
   class?: string;
@@ -12,15 +8,6 @@ interface Props {
 ---
 
 <section class={twMerge("flex flex-col", Astro.props.class)}>
-  <Image
-    src={PortraitImage}
-    alt="Portrait picture of William Darian"
-    height={331}
-    width={331}
-    class="-mt-6 flex-grow-0"
-    style={blurhash("URMQ9Uof~pWB^+WBRjofI;ofM{jZ^*ayRjj[")}
-  />
-
   <div class="flex flex-col gap-4 bg-treehouse-950 p-4 text-tapa-50">
     <div class="flex gap-2">
       <Icon name="tabler:mail" class="flex-shrink-0" size={32} />
@@ -71,22 +58,30 @@ interface Props {
     </div>
     <hr class="border-t-2 text-tapa-700" />
 
-    <div class="flex items-center justify-between">
-      <Icon name="tabler:brand-github" size={20} />
-      <a
-        href="https://github.com/risk1996"
-        class="text-sm font-light underline"
-      >
-        risk1996
-      </a>
-      <span class="font-bold text-tapa-700"> | </span>
-      <Icon name="tabler:brand-linkedin" size={20} />
-      <a
-        href="https://www.linkedin.com/in/william-darian-sutedjo/"
-        class="text-sm font-light underline"
-      >
-        william-darian-sutedjo
-      </a>
+    <div
+      class="flex flex-col justify-between gap-2 lg:flex-row lg:items-center lg:gap-0"
+    >
+      <div class="flex flex-row">
+        <Icon name="tabler:brand-github" size={20} class="mr-2" />
+        <a
+          href="https://github.com/risk1996"
+          class="text-sm font-light underline"
+        >
+          risk1996
+        </a>
+      </div>
+
+      <span class="hidden font-bold text-tapa-700 lg:block"> | </span>
+
+      <div class="flex flex-row">
+        <Icon name="tabler:brand-linkedin" size={20} class="mr-2" />
+        <a
+          href="https://www.linkedin.com/in/william-darian-sutedjo/"
+          class="text-sm font-light underline"
+        >
+          william-darian-sutedjo
+        </a>
+      </div>
     </div>
   </div>
 </section>

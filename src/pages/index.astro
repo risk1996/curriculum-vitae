@@ -1,5 +1,6 @@
 ---
 import Bio from "../components/bio.astro";
+import Faceshot from "../components/faceshot.astro";
 import Footer from "../components/footer.astro";
 import Heading from "../components/heading.astro";
 import PersonalDevelopment from "../components/personal-development.astro";
@@ -11,19 +12,21 @@ import Layout from "../layout.astro";
 
 <Layout
   title="William Darian | Principal Software Engineer"
-  class="flex flex-col bg-treehouse-50 p-10 text-tapa-900"
+  class="flex flex-col bg-treehouse-50 p-4 text-tapa-900 md:p-10"
 >
   <main class="grid max-w-screen-lg grid-cols-12 gap-4 self-center">
-    <div class="col-span-8">
-      <Heading />
-      <Bio class="pt-8" />
-      <hr class="border-tapa-600" />
-      <PersonalDevelopment class="mt-6" />
+    <Heading class="col-span-12 md:col-span-8" />
+
+    <div class="col-span-12 pt-4 md:col-span-4 md:row-span-2 md:pt-0">
+      <Faceshot class="-mt-4 md:-mt-10" />
+      <Profile />
+      <Sidebar class="mt-6" />
     </div>
 
-    <div class="col-span-4">
-      <Profile class="-mt-10" />
-      <Sidebar class="mt-6" />
+    <div class="col-span-12 md:col-span-8">
+      <Bio class="pt-4 md:pt-8" />
+      <hr class="border-tapa-600" />
+      <PersonalDevelopment class="mt-6" />
     </div>
 
     <div class="break-before-page screen:hidden print:h-4"></div>
