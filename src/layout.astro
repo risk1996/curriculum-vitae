@@ -2,6 +2,7 @@
 import "@fontsource-variable/inter";
 
 interface Props {
+  class?: string;
   title: string;
 }
 ---
@@ -27,7 +28,8 @@ interface Props {
     />
     <meta name="author" content="William Darian" />
   </head>
-  <body class="flex flex-col bg-treehouse-50 p-10 text-tapa-900">
+
+  <body class={Astro.props.class}>
     <slot />
   </body>
 </html>
