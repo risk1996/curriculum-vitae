@@ -12,20 +12,20 @@
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.0",
-    "@fontsource-variable/inter": "^5.0.20",
-    "@iconify-json/tabler": "^1.2.0",
+    "@fontsource-variable/inter": "^5.1.0",
+    "@iconify-json/tabler": "^1.2.2",
     "@unpic/placeholder": "^0.1.2",
-    "astro": "^4.15.3",
+    "astro": "^4.15.4",
     "astro-icon": "^1.1.1",
     "dayjs": "^1.11.13",
     "embla-carousel": "^8.2.1",
     "embla-carousel-wheel-gestures": "^8.0.1",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.6.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.0",
     "@types/node": "^22.5.4",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
