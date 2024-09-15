@@ -13,16 +13,26 @@ interface Props {
 <script>
   import EmblaCarousel from "embla-carousel";
   import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+  import { array, number } from "valibot";
 
-  const nodes = document.querySelectorAll<HTMLElement>(".embla");
+  import { readLocalStorage } from "../helpers/storage";
 
-  for (const root of nodes) {
+  const nodes = window.document.querySelectorAll<HTMLElement>(".embla");
+  const POSTION_KEY = "carousel-position";
+  // NOTE: Internal mutability
+  const positions = readLocalStorage(POSTION_KEY, array(number()), []);
+
+  for (let i = 0; i < nodes.length; i++) {
+    const root = nodes[i];
+    if (!root) continue;
+
     const viewport = root.querySelector<HTMLElement>(".embla__viewport");
     const carousel = EmblaCarousel(
       viewport ?? root,
-      { containScroll: false, skipSnaps: true },
+      { containScroll: false, skipSnaps: true, startIndex: positions[i] ?? 0 },
       [WheelGesturesPlugin()],
     );
+    carousel.on("select", (c) => (positions[i] = c.selectedScrollSnap()));
 
     const prev = root.querySelector(".embla__prev");
     if (prev) {
@@ -50,4 +60,8 @@ interface Props {
       carousel.on("destroy", () => next.removeAttribute("disabled"));
     }
   }
+
+  window.addEventListener("beforeunload", () =>
+    localStorage.setItem(POSTION_KEY, JSON.stringify(positions)),
+  );
 </script>
