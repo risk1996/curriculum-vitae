@@ -17,6 +17,7 @@
     "@unpic/placeholder": "^0.1.2",
     "astro": "^4.15.7",
     "astro-icon": "^1.1.1",
+    "astro-seo": "^0.8.4",
     "dayjs": "^1.11.13",
     "embla-carousel": "^8.3.0",
     "embla-carousel-wheel-gestures": "^8.0.1",

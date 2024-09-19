@@ -1,13 +1,19 @@
 ---
+import { SEO } from "astro-seo";
+
 import "@fontsource-variable/inter";
 
 interface Props {
   class?: string;
+  lang: "en";
   title: string;
+  description: string;
+  keywords: string[];
+  author: string;
 }
 ---
 
-<html lang="en">
+<html lang={Astro.props.lang}>
   <head>
     <title>{Astro.props.title}</title>
     <meta charset="utf-8" />
@@ -18,15 +24,21 @@ interface Props {
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="Valedictorian in Computer Engineering from Universitas Multimedia Nusantara. Former Principal Software Engineer with expertise in full stack development, React Native, NextJS, and back-end technologies like Spring Boot and Express. Led development of major digital banking apps at Cermati.com and now exploring job opportunities in Tokyo, Japan."
+    <meta name="description" content={Astro.props.description} />
+    <meta name="keywords" content={Astro.props.keywords.join(", ")} />
+    <meta name="author" content={Astro.props.author} />
+
+    <SEO
+      openGraph={{
+        basic: {
+          title: Astro.props.title,
+          type: "website",
+          image: `${import.meta.env.BASE_URL}/open-graph.png`,
+          url: `${import.meta.env.SITE}${import.meta.env.BASE_URL}`,
+        },
+        optional: { description: Astro.props.description },
+      }}
     />
-    <meta
-      name="keywords"
-      content="Principal Software Engineer, Full Stack Developer, React Native, NextJS, Spring Boot, tRPC, Rust, WebAssembly, Digital Banking, Cermati.com, blu by BCA Digital, BCA Lifestyle, Tokyo job opportunities, Valedictorian, Computer Engineering, Universitas Multimedia Nusantara, Competitive Programming, Front-end Development, Back-end Development, Mobile App Development"
-    />
-    <meta name="author" content="William Darian" />
   </head>
 
   <body class={Astro.props.class}>
