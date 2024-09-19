@@ -9,9 +9,9 @@ interface Props {
 }
 ---
 
-<div class={twMerge("flex flex-col gap-6", Astro.props.class)}>
+<div class={twMerge("flex flex-col gap-4", Astro.props.class)}>
   <HistorySection
-    class="mb-4 flex flex-col gap-4"
+    class="mb-2 flex flex-col gap-4"
     legend="Professional Experience"
   >
     <HistoryItem
@@ -27,7 +27,7 @@ interface Props {
     />
   </HistorySection>
 
-  <HistorySection class="mb-4 flex flex-col gap-4" legend="Education">
+  <HistorySection class="mb-2 flex flex-col gap-4" legend="Education">
     <HistoryItem
       name="Yoshida Institute of Japanese Language"
       desc="Apr 2024 – Present | N2 Language Course"
@@ -41,13 +41,18 @@ interface Props {
   </HistorySection>
 
   <HistorySection
-    class="mb-4 flex flex-col gap-4"
+    class="mb-2 flex flex-col gap-4"
     legend="Qualifications & Achievements"
   >
     <HistoryItem
       name="Japanese Language Proficiency Test (N3)"
       desc="Jul 2024 | Japan Educational Exchanges and Services (JEES)"
       info="Registration No.: 133433094"
+    />
+    <HistoryItem
+      name="Test of English for International Communication (TOEIC)"
+      desc="May 2019 | International Test Center, Indonesia"
+      info="Score: 955 (listening: 485, reading: 470) | CEFR Level: C1"
     />
     <HistoryItem
       name="Red Hat Certified System Administrator v8"
