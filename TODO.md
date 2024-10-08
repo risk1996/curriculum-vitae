@@ -9,3 +9,4 @@
  - [ ] Dark mode
  - [ ] Tech stack as badges
  - [ ] i18n
+ - [ ] Twitter social share

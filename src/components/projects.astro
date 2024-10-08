@@ -37,6 +37,11 @@ import GT07Image from "../../public/gt/07-manufacturing-production.jpg";
 import GT08Image from "../../public/gt/08-stock-adjustment.jpg";
 import GT09Image from "../../public/gt/09-account-detail.jpg";
 import GT10Image from "../../public/gt/10-organization-detail-modal.jpg";
+import KYC01Image from "../../public/kyc/01-settings.png";
+import KYC02Image from "../../public/kyc/02-select-product.png";
+import KYC03Image from "../../public/kyc/03-id-card.png";
+import KYC04Image from "../../public/kyc/04-personal-data.png";
+import KYC05Image from "../../public/kyc/05-bank-account.png";
 import MV01Image from "../../public/mv/01-lifestyle-home.jpg";
 import MV02Image from "../../public/mv/02-movie-landing.jpg";
 import MV03Image from "../../public/mv/03-movie-detail-cover.jpg";
@@ -55,19 +60,53 @@ import MV10Image from "../../public/mv/10-movie-ticket.jpg";
 >
   <HistoryItem name="Greentech ERP" desc="Jun 2024 – Present">
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b> Scope: </b>
-      Ongoing freelance project developing an enterprise resource planning system
-      to manage inventory, manufacturing, BOMs, and clerical tasks. The system tracks
-      orders, purchase orders, sales orders, and delivery orders for manufacturer,
-      distributor and dealer.
+      A web-based enterprise resource planning (ERP) system for an electric
+      motorcycle manufacturer, used to track inventory, manufacturing, orders,
+      deliveries, and sales.
+      <br />
+      The project was highly tailored to the client's needs and existing business
+      processes, replacing manual labor previously required for managing the entire
+      B2B business flow (e.g., tracking orders through systems rather than ad-hoc
+      WhatsApp messages).
     </p>
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b>Impact:</b>
+      <b> Responsibilities: </b>
+      <ul class="list-disc pb-1.5 pl-4 text-justify text-sm text-tapa-600">
+        <li>
+          Selecting versatile tech stacks to allow for faster iterations and
+          adequate scalability.
+        </li>
+        <li>
+          Set up a codebase that enforces standardized coding practices and
+          style using linters and formatters.
+        </li>
+        <li>
+          Develop, iterate on, and debug both front-end and back-end
+          applications to ensure the solutions provided matched the client's
+          requirements.
+        </li>
+        <li>
+          Suggested and implemented changes that improved application
+          performance.
+        </li>
+        <li>
+          Ensured the front-end was coherent, consistent, and met the client's
+          expectations for usability.
+        </li>
+      </ul>
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Environment: </b>
+      Collaborative freelance project with a two-person development team, ensuring
+      efficient communication and agile iterations.
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Impact: </b>
       Automated inventory management, replacing manual processes and significantly
       improving efficiency.
     </p>
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b> Tech Stack:</b>
+      <b> Tech Stack: </b>
       TypeScript, NextJS, Mantine, tRPC, Tanstack Query, Typesafe I18n, Zod, Dayjs,
       React PDF, Drizzle ORM, PostgreSQL, Vite.
     </p>
@@ -241,315 +280,536 @@ import MV10Image from "../../public/mv/10-movie-ticket.jpg";
     </Carousel>
   </HistoryItem>
 
-  <HistoryItem name="blu by BCA Digital" desc="Feb 2020 – Apr 2024">
+  <HistoryItem name="Cermati.com KYC Center" desc="Sep 2022 – Mar 2024">
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b> Scope: </b>
-      Spearheaded the development of a cross-platform mobile application from scratch
-      for BCA Digital, providing comprehensive digital banking services. Key features
-      include in-app customer registration, multi-factor authentication, online transfers,
-      time deposits, a reward system, and KYC integration via video calls.
+      A unified financial services user registration and approval process for
+      the Cermati.com application. The highly adaptable system adjusts to
+      previously registered services and available user data, presenting only
+      the remaining incomplete data during the registration process.
+      <br />
+      The approval process integrates two separate back-office systems into one,
+      allowing internal reviewers to approve or reject potential users in accordance
+      with the company's risk management policy. If rejected, the user is notified
+      of the reason and can reapply with the corrected information.
     </p>
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b>Impact:</b>
+      <b> Responsibilities: </b>
+      <ul class="list-disc pb-1.5 pl-4 text-justify text-sm text-tapa-600">
+        <li>
+          Developed and maintained back-end services exposed via REST API for
+          the integrated registration process (user-facing registration and
+          internal team approval process).
+        </li>
+        <li>
+          Integrated with financial service providers and other services for ID
+          card OCR, regulatory compliance, and bank account number verification.
+        </li>
+        <li>
+          Ensured high confidence in the end-to-end flow through unit and
+          integration tests.
+        </li>
+        <li>
+          Optimized service performance and scalability by conducting load
+          testing simulations and optimizing database queries.
+        </li>
+        <li>
+          Designed and prototyped encryption at rest for sensitive user data
+          (PII).
+        </li>
+      </ul>
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Environment: </b>
+      Two-person back-end team, working closely and collaboratively with a two-person
+      front-end team and a product manager.
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Impact: </b>
+      Minimized friction and reduced the time required for users to register for
+      Mutual Fund and Digital Gold on the Cermati.com app.
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Tech Stack: </b>
+      Java 11, Spring Boot 2, Spring 5, Reactor/Webflux, Jackson, Keycloak, OAuth/JWT,
+      Hibernate, Flyway, Lombok, Easy Rules, TestNG, Mockito, Slf4j, Prometheus,
+      Grafana, GCP, Docker, Kubernetes, PostgreSQL, MongoDB, Redis, Bucket4j.
+    </p>
+
+    <Carousel class="py-4">
+      <CarouselContainer
+        class="grid grid-flow-col grid-cols-5 grid-rows-1 gap-0.5 screen:script:flex screen:script:gap-2 print:px-40"
+      >
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/kyc/01-settings.png`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={KYC01Image}
+              alt="Cermati.com Settings Page"
+              height={400}
+              width={400 * aspect(KYC01Image)}
+              style={blurhash("U1S?DV0059~q00N#S5W?00tT^,RQ56%LIUsn")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/kyc/02-select-product.png`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={KYC02Image}
+              alt="KYC Center Select Product Page"
+              height={400}
+              width={400 * aspect(KYC02Image)}
+              style={blurhash("UDT99TjtkWofYkayV@j[Uuj@ozjtYQj[aKay")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/kyc/03-id-card.png`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={KYC03Image}
+              alt="KYC Center ID Card Page"
+              height={400}
+              width={400 * aspect(KYC03Image)}
+              style={blurhash("UCODd^S4o#s.00n$V?WX}rj[t7ayhLWqjYoL")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/kyc/04-personal-data.png`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={KYC04Image}
+              alt="KYC Center Personal Data Page"
+              height={400}
+              width={400 * aspect(KYC04Image)}
+              style={blurhash("UDS~n#Rjbbt7YkWBV@ofL#oft7ayT|t7jFWB")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/kyc/05-bank-account.png`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={KYC05Image}
+              alt="KYC Center Bank Account Page"
+              height={400}
+              width={400 * aspect(KYC05Image)}
+              style={blurhash("UNSF;MWBj[j[~pWVaej[4oj[ofay%Lofayay")}
+            />
+          </a>
+        </CarouselSlide>
+      </CarouselContainer>
+
+      <div
+        class="absolute bottom-0 left-0 top-0 hidden items-center bg-gradient-to-r from-treehouse-50 to-transparent screen:script:flex"
+      >
+        <CarouselButton type="prev" />
+      </div>
+      <div
+        class="absolute bottom-0 right-0 top-0 hidden items-center bg-gradient-to-l from-treehouse-50 to-transparent screen:script:flex"
+      >
+        <CarouselButton type="next" />
+      </div>
+    </Carousel>
+  </HistoryItem>
+
+  <div class="break-before-page screen:hidden print:h-4"></div>
+
+  <HistoryItem name="blu by BCA Digital" desc="Feb 2020 – Mar 2024">
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      A cross-platform mobile application for a digital bank offering numerous
+      financial services such as savings, time deposits, transfers, online
+      purchases, contactless payments via QRIS, virtual and physical debit
+      cards, and foreign currency exchange.
+      <br />
+      The app was central to BCA Digital, as customers access all services exclusively
+      through the application (no physical branches).
+      <br />
+      The application undergoes rapid iterations to stay competitive in the fast-growing
+      market. React Native (a single codebase deployable to both Android and iOS)
+      significantly helps this process, enabling consistent updates with new features
+      and product enhancements every 3 weeks.
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Responsibilities: </b>
+      <ul class="list-disc pb-1.5 pl-4 text-justify text-sm text-tapa-600">
+        <li>
+          Prototyped the feasibility of using React Native for cross-platform
+          mobile development.
+        </li>
+        <li>
+          Chose TypeScript (Cermati's first project to do so) to minimize
+          runtime errors by leveraging static type checking across the entire
+          codebase and its dependencies.
+        </li>
+        <li>
+          Established the code structure, application architecture, and vertical
+          separation, using an inversion of control library to maintain a fast
+          development cycle as the codebase and team size grew.
+        </li>
+        <li>
+          Developed a robust multi-factor authentication and registration
+          process with video call KYC for new individual users.
+        </li>
+        <li>
+          Resolved technical issues stemming from platform differences,
+          device-specific quirks, and bugs in the frameworks and libraries used.
+        </li>
+        <li>
+          Onboarded and mentored new engineers, helping them get up to speed
+          with development phases and sprints.
+        </li>
+      </ul>
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Environment: </b>
+      Four-person front-end team working in close coordination with a six-person
+      back-end team and maintaining regular communication with the bank client to
+      align on technical and business requirements.
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Impact: </b>
       Streamlined traditional banking processes, significantly increasing user adoption
       and satisfaction. The app is available on both Google Play Store and Apple
       App Store.
     </p>
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b> Tech Stack:</b>
+      <b> Tech Stack: </b>
       TypeScript, React Native, Redux + Saga middleware, SSL Pinning, React I18n,
       React Hook Forms, Yup, Moment, React Navigation, Styled System, Java/Kotlin
       (Android), Objective-C/Swift (iOS), Firebase, and other third-party integrations.
     </p>
+
+    <Carousel class="py-4">
+      <CarouselContainer
+        class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_1fr_2fr_1fr_1fr_1fr_1fr_2fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
+      >
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/01-landing.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU01Image}
+              alt="blu by BCA Landing Page"
+              height={400}
+              width={400 * aspect(BLU01Image)}
+              style={blurhash("UBCK3TWBCQtk2Boz+^V@_Noyq^V@DORjcEtR")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/02-prelogin.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU02Image}
+              alt="blu by BCA Prelogin Page"
+              height={400}
+              width={400 * aspect(BLU02Image)}
+              style={blurhash("U@Nv}mjZx[j[xUWBWCjt?wWVRjay%KjtWBa{")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]" class="row-span-2">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/03-home.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU03Image}
+              alt="blu by BCA Home Page"
+              height={400}
+              width={400 * aspect(BLU03Image)}
+              style={blurhash("U5QAU0*DIX^m0vHw9Z%b00Tnx]8}3yDSJ5O8")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/04-transaction-sheet.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU04Image}
+              alt="blu by BCA Transaction Sheet Page"
+              height={400}
+              width={400 * aspect(BLU04Image)}
+              style={blurhash("U4OgWz9b~n-o00xo4qR-00V{R:WA03bI%FV@")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/05-transfer-destination-list.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU05Image}
+              alt="blu by BCA Transfer Destination List Page"
+              height={400}
+              width={400 * aspect(BLU05Image)}
+              style={blurhash("UASF@X9ay9o#~S$*DnaeRYxZ-#jY?qR%9Joy")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/06-transfer-detail.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU06Image}
+              alt="blu by BCA Transfer Detail Page"
+              height={400}
+              width={400 * aspect(BLU06Image)}
+              style={blurhash("UJS6Puax%Ij^~iayIWj[D?j]WCj=?TofRkaf")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/07-flazz-nfc-scan.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU07Image}
+              alt="blu by BCA Flazz NFC Scan Page"
+              height={400}
+              width={400 * aspect(BLU07Image)}
+              style={blurhash("UWLN.6j[xZay00ayWCayaxayazj[~qayt6j[")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]" class="row-span-2">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/08-gift-card-design.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU08Image}
+              alt="blu by BCA Gift Card Design Page"
+              height={400}
+              width={400 * aspect(BLU08Image)}
+              style={blurhash("UlNwc=WBx]a#-.j@V[ay~qflVsj@xRayWEja")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/09-subaccount-creation.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU09Image}
+              alt="blu by BCA Subaccount Creation Page"
+              height={400}
+              width={400 * aspect(BLU09Image)}
+              style={blurhash("UZRns7WBxYofujj[V^ay8yoft6af?[ayR.oL")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/10-settings.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU10Image}
+              alt="blu by BCA Settings Page"
+              height={400}
+              width={400 * aspect(BLU10Image)}
+              style={blurhash("U3Ss884n9tXS-VadVrsT^*Nx%Mof_N^+E1R+")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/11-profile.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU11Image}
+              alt="blu by BCA Profile Page"
+              height={400}
+              width={400 * aspect(BLU11Image)}
+              style={blurhash("U4S$ovD%-;t7_3xtf6j[IUj[Rjay~qof4nWB")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/12-update-address.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU12Image}
+              alt="blu by BCA Update Address Page"
+              height={400}
+              width={400 * aspect(BLU12Image)}
+              style={blurhash("UFRMe|jFxst7-woLIXfk0Bj]xsj[~jofM|oL")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/13-referral.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU13Image}
+              alt="blu by BCA Referral Page"
+              height={400}
+              width={400 * aspect(BLU13Image)}
+              style={blurhash("UWQAHsae?aoL~6bHbwa}9ioeoHay_0jZD*j[")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/14-proxy-address.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU14Image}
+              alt="blu by BCA Proxy Address Page"
+              height={400}
+              width={400 * aspect(BLU14Image)}
+              style={blurhash("U5Ss8A03-:~m?T%GIVM+-%--RkIWRrRWM{xp")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/15-biometrics.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU15Image}
+              alt="blu by BCA Biometrics Page"
+              height={400}
+              width={400 * aspect(BLU15Image)}
+              style={blurhash("UCQ^2LM{~qtQ0JofWBayTvWV00ax0ws:Rjj[")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/16-tracker-and-history.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU16Image}
+              alt="blu by BCA Tracker and History Page"
+              height={400}
+              width={400 * aspect(BLU16Image)}
+              style={blurhash("U4R3sG~K%29i0c97ix?T00~QSK9g00D@n$x,")}
+            />
+          </a>
+        </CarouselSlide>
+        <CarouselSlide class="max-w-[calc(100vw-100px)]" class="row-span-2">
+          <a
+            class="flex items-center justify-center"
+            href={`${import.meta.env.BASE_URL}/blu/17-promotions-swiper.jpg`}
+          >
+            <Image
+              class="rounded-md screen:shadow-md"
+              src={BLU17Image}
+              alt="blu by BCA Promotions Swiper Page"
+              height={400}
+              width={400 * aspect(BLU17Image)}
+              style={blurhash("U78gz0=}0e0M#QVsTKJ8NFInRisl0fIp~B^*")}
+            />
+          </a>
+        </CarouselSlide>
+      </CarouselContainer>
+
+      <div
+        class="absolute bottom-0 left-0 top-0 hidden items-center bg-gradient-to-r from-treehouse-50 to-transparent screen:script:flex"
+      >
+        <CarouselButton type="prev" />
+      </div>
+      <div
+        class="absolute bottom-0 right-0 top-0 hidden items-center bg-gradient-to-l from-treehouse-50 to-transparent screen:script:flex"
+      >
+        <CarouselButton type="next" />
+      </div>
+    </Carousel>
   </HistoryItem>
-
-  <Carousel class="-my-4 py-4">
-    <CarouselContainer
-      class="grid grid-flow-col grid-cols-[1fr_2fr_1fr_1fr_2fr_1fr_1fr_1fr_1fr_2fr] grid-rows-2 gap-0.5 screen:script:flex screen:script:gap-2"
-    >
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/01-landing.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU01Image}
-            alt="blu by BCA Landing Page"
-            height={400}
-            width={400 * aspect(BLU01Image)}
-            style={blurhash("UBCK3TWBCQtk2Boz+^V@_Noyq^V@DORjcEtR")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/02-prelogin.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU02Image}
-            alt="blu by BCA Prelogin Page"
-            height={400}
-            width={400 * aspect(BLU02Image)}
-            style={blurhash("U@Nv}mjZx[j[xUWBWCjt?wWVRjay%KjtWBa{")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]" class="row-span-2">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/03-home.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU03Image}
-            alt="blu by BCA Home Page"
-            height={400}
-            width={400 * aspect(BLU03Image)}
-            style={blurhash("U5QAU0*DIX^m0vHw9Z%b00Tnx]8}3yDSJ5O8")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/04-transaction-sheet.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU04Image}
-            alt="blu by BCA Transaction Sheet Page"
-            height={400}
-            width={400 * aspect(BLU04Image)}
-            style={blurhash("U4OgWz9b~n-o00xo4qR-00V{R:WA03bI%FV@")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/05-transfer-destination-list.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU05Image}
-            alt="blu by BCA Transfer Destination List Page"
-            height={400}
-            width={400 * aspect(BLU05Image)}
-            style={blurhash("UASF@X9ay9o#~S$*DnaeRYxZ-#jY?qR%9Joy")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/06-transfer-detail.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU06Image}
-            alt="blu by BCA Transfer Detail Page"
-            height={400}
-            width={400 * aspect(BLU06Image)}
-            style={blurhash("UJS6Puax%Ij^~iayIWj[D?j]WCj=?TofRkaf")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/07-flazz-nfc-scan.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU07Image}
-            alt="blu by BCA Flazz NFC Scan Page"
-            height={400}
-            width={400 * aspect(BLU07Image)}
-            style={blurhash("UWLN.6j[xZay00ayWCayaxayazj[~qayt6j[")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]" class="row-span-2">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/08-gift-card-design.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU08Image}
-            alt="blu by BCA Gift Card Design Page"
-            height={400}
-            width={400 * aspect(BLU08Image)}
-            style={blurhash("UlNwc=WBx]a#-.j@V[ay~qflVsj@xRayWEja")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/09-subaccount-creation.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU09Image}
-            alt="blu by BCA Subaccount Creation Page"
-            height={400}
-            width={400 * aspect(BLU09Image)}
-            style={blurhash("UZRns7WBxYofujj[V^ay8yoft6af?[ayR.oL")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/10-settings.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU10Image}
-            alt="blu by BCA Settings Page"
-            height={400}
-            width={400 * aspect(BLU10Image)}
-            style={blurhash("U3Ss884n9tXS-VadVrsT^*Nx%Mof_N^+E1R+")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/11-profile.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU11Image}
-            alt="blu by BCA Profile Page"
-            height={400}
-            width={400 * aspect(BLU11Image)}
-            style={blurhash("U4S$ovD%-;t7_3xtf6j[IUj[Rjay~qof4nWB")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/12-update-address.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU12Image}
-            alt="blu by BCA Update Address Page"
-            height={400}
-            width={400 * aspect(BLU12Image)}
-            style={blurhash("UFRMe|jFxst7-woLIXfk0Bj]xsj[~jofM|oL")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/13-referral.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU13Image}
-            alt="blu by BCA Referral Page"
-            height={400}
-            width={400 * aspect(BLU13Image)}
-            style={blurhash("UWQAHsae?aoL~6bHbwa}9ioeoHay_0jZD*j[")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/14-proxy-address.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU14Image}
-            alt="blu by BCA Proxy Address Page"
-            height={400}
-            width={400 * aspect(BLU14Image)}
-            style={blurhash("U5Ss8A03-:~m?T%GIVM+-%--RkIWRrRWM{xp")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/15-biometrics.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU15Image}
-            alt="blu by BCA Biometrics Page"
-            height={400}
-            width={400 * aspect(BLU15Image)}
-            style={blurhash("UCQ^2LM{~qtQ0JofWBayTvWV00ax0ws:Rjj[")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/16-tracker-and-history.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU16Image}
-            alt="blu by BCA Tracker and History Page"
-            height={400}
-            width={400 * aspect(BLU16Image)}
-            style={blurhash("U4R3sG~K%29i0c97ix?T00~QSK9g00D@n$x,")}
-          />
-        </a>
-      </CarouselSlide>
-      <CarouselSlide class="max-w-[calc(100vw-100px)]" class="row-span-2">
-        <a
-          class="flex items-center justify-center"
-          href={`${import.meta.env.BASE_URL}/blu/17-promotions-swiper.jpg`}
-        >
-          <Image
-            class="rounded-md screen:shadow-md"
-            src={BLU17Image}
-            alt="blu by BCA Promotions Swiper Page"
-            height={400}
-            width={400 * aspect(BLU17Image)}
-            style={blurhash("U78gz0=}0e0M#QVsTKJ8NFInRisl0fIp~B^*")}
-          />
-        </a>
-      </CarouselSlide>
-    </CarouselContainer>
-
-    <div
-      class="absolute bottom-0 left-0 top-0 hidden items-center bg-gradient-to-r from-treehouse-50 to-transparent screen:script:flex"
-    >
-      <CarouselButton type="prev" />
-    </div>
-    <div
-      class="absolute bottom-0 right-0 top-0 hidden items-center bg-gradient-to-l from-treehouse-50 to-transparent screen:script:flex"
-    >
-      <CarouselButton type="next" />
-    </div>
-  </Carousel>
 
   <HistoryItem name="BCA Lifestyle: Movie Vertical" desc="Nov 2019 – Apr 2020">
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b> Scope: </b>
-      Developed and integrated the movie ticket vertical within a digital banking
-      app, working with a three-person front-end team and coordinating with cross-functional
-      teams.
+      A superapp feature that allows BCA's customers to enjoy an integrated
+      shopping experience within the mobile banking app, including purchasing
+      movie tickets. BCA customers can buy up to six movie tickets, view cinemas
+      and time slots, and reserve their seats directly in the app. Purchased
+      tickets can be easily redeemed on-site by entering credentials from the
+      e-ticket.
     </p>
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b>Impact:</b>
+      <b> Responsibilities: </b>
+      <ul class="list-disc pb-1.5 pl-4 text-justify text-sm text-tapa-600">
+        <li>
+          Developed the movie vertical based on business requirements and
+          high-fidelity mockups.
+        </li>
+        <li>
+          Created an interactive, touch-first experience for selecting seats,
+          showing only available seats, matching seat layouts to the actual
+          cinemas, and providing zoom/pan functionality tailored to small
+          screens.
+        </li>
+        <li>
+          Collaborated with product managers and the UI/UX team to discuss and
+          finalize implementation details.
+        </li>
+      </ul>
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Environment: </b>
+      Three-person front-end team collaborating with cross-functional teams, including
+      product, design, and operations, to deliver features aligned with product requirements.
+    </p>
+    <p class="pb-1.5 text-justify text-sm text-tapa-600">
+      <b> Impact: </b>
       Enabled seamless movie ticket purchases, seat selection, and e-ticket viewing.
       Completed the project in six months.
     </p>
     <p class="pb-1.5 text-justify text-sm text-tapa-600">
-      <b> Tech Stack:</b>
+      <b> Tech Stack: </b>
       JavaScript, React, Redux + Thunk middleware, React Router, React I18n, Redux
       Form, Moment, Styled Components, SASS, Axios, Webpack, REST APIs.
     </p>
