@@ -1,11 +1,11 @@
 import {
-  parse,
   type BaseIssue,
   type BaseSchema,
   type InferOutput,
+  parse,
 } from "valibot";
 
-import { safeTry } from "./error";
+import { safeTry } from "~/helpers/error";
 
 export function readLocalStorage<
   const TSchema extends BaseSchema<unknown, unknown, BaseIssue<unknown>>,

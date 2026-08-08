@@ -15,7 +15,7 @@ interface Props {
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import { array, number } from "valibot";
 
-  import { readLocalStorage } from "../helpers/storage";
+  import { readLocalStorage } from "~/helpers/storage";
 
   const nodes = window.document.querySelectorAll<HTMLElement>(".embla");
   const POSITION_KEY = "carousel-position";

@@ -8,6 +8,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  resolve: { tsconfigPaths: true },
   site: "https://risk1996.github.io",
   base: "curriculum-vitae",
 });
