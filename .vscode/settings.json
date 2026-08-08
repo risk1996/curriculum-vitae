@@ -3,6 +3,7 @@
     "astrojs",
     "biomejs",
     "blurhash",
+    "faceshot",
     "fontsource",
     "iconify",
     "segoe",
@@ -25,7 +26,7 @@
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
@@ -35,8 +36,7 @@
   },
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit",
-    "source.organizeImports.biome": "explicit"
+    "source.fixAll.biome": "explicit"
   },
   "editor.defaultFormatter": "biomejs.biome",
   "discord.enabled": true,

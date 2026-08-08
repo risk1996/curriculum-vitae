@@ -59,7 +59,7 @@ export default {
     plugin(({ addVariant }) => {
       addVariant("screen", "@media screen");
       addVariant("script", "@media (scripting: enabled)");
-      addVariant("-script", "@media (scripting: none)");
+      addVariant("noscript", "@media (scripting: none)");
     }),
   ],
 };

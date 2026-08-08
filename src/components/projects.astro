@@ -1,15 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import { twMerge } from "tailwind-merge";
-
-import { aspect, blurhash } from "../helpers/image";
-import CarouselButton from "./carousel-button.astro";
-import CarouselContainer from "./carousel-container.astro";
-import CarouselSlide from "./carousel-slide.astro";
-import Carousel from "./carousel.astro";
-import HistoryItem from "./history-item.astro";
-import HistorySection from "./history-section.astro";
-
 import BLU01Image from "../../public/blu/01-landing.jpg";
 import BLU02Image from "../../public/blu/02-prelogin.jpg";
 import BLU03Image from "../../public/blu/03-home.jpg";
@@ -52,6 +43,13 @@ import MV07Image from "../../public/mv/07-movie-seat-selected.jpg";
 import MV08Image from "../../public/mv/08-movie-checkout.jpg";
 import MV09Image from "../../public/mv/09-movie-receipt.jpg";
 import MV10Image from "../../public/mv/10-movie-ticket.jpg";
+import { aspect, blurhash } from "../helpers/image";
+import CarouselButton from "./carousel-button.astro";
+import CarouselContainer from "./carousel-container.astro";
+import CarouselSlide from "./carousel-slide.astro";
+import Carousel from "./carousel.astro";
+import HistoryItem from "./history-item.astro";
+import HistorySection from "./history-section.astro";
 ---
 
 <HistorySection
@@ -268,12 +266,12 @@ import MV10Image from "../../public/mv/10-movie-ticket.jpg";
       </CarouselContainer>
 
       <div
-        class="absolute bottom-0 left-0 top-0 hidden items-center bg-gradient-to-r from-treehouse-50 to-transparent screen:script:flex"
+        class="absolute bottom-0 left-0 top-0 hidden items-center bg-linear-to-r from-treehouse-50 to-transparent screen:script:flex"
       >
         <CarouselButton type="prev" />
       </div>
       <div
-        class="absolute bottom-0 right-0 top-0 hidden items-center bg-gradient-to-l from-treehouse-50 to-transparent screen:script:flex"
+        class="absolute bottom-0 right-0 top-0 hidden items-center bg-linear-to-l from-treehouse-50 to-transparent screen:script:flex"
       >
         <CarouselButton type="next" />
       </div>
@@ -417,12 +415,12 @@ import MV10Image from "../../public/mv/10-movie-ticket.jpg";
       </CarouselContainer>
 
       <div
-        class="absolute bottom-0 left-0 top-0 hidden items-center bg-gradient-to-r from-treehouse-50 to-transparent screen:script:flex"
+        class="absolute bottom-0 left-0 top-0 hidden items-center bg-linear-to-r from-treehouse-50 to-transparent screen:script:flex"
       >
         <CarouselButton type="prev" />
       </div>
       <div
-        class="absolute bottom-0 right-0 top-0 hidden items-center bg-gradient-to-l from-treehouse-50 to-transparent screen:script:flex"
+        class="absolute bottom-0 right-0 top-0 hidden items-center bg-linear-to-l from-treehouse-50 to-transparent screen:script:flex"
       >
         <CarouselButton type="next" />
       </div>

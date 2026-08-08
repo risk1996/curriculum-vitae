@@ -1,10 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import { twMerge } from "tailwind-merge";
-
-import { blurhash } from "../helpers/image";
-
 import PortraitImage from "../../public/portrait.jpg";
+import { blurhash } from "../helpers/image";
 
 interface Props {
   class?: string;
@@ -16,7 +14,7 @@ interface Props {
   alt="Portrait picture of William Darian"
   height={740}
   width={740}
-  class={twMerge("flex-grow-0", Astro.props.class)}
+  class={twMerge("grow-0", Astro.props.class)}
   style={blurhash("URMQ9Uof~pWB^+WBRjofI;ofM{jZ^*ayRjj[")}
   loading="eager"
 />
