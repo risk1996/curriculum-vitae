@@ -2,11 +2,11 @@
 import { SEO } from "astro-seo";
 
 import "@fontsource-variable/inter";
-import "./styles/global.css";
+import "~/styles/global.css";
 
 interface Props {
   class?: string;
-  lang: "en";
+  lang: "en" | "ja";
   title: string;
   description: string;
   keywords: string[];

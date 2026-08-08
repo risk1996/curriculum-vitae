@@ -1,0 +1,96 @@
+---
+import PageShell from "~/components/rekisho/PageShell.astro";
+import Layout from "~/layout.astro";
+---
+
+<Layout
+  lang="ja"
+  title="履歴書"
+  description="日本の履歴書の形式に準拠した空白テンプレート"
+  keywords={["履歴書", "日本式履歴書", "空白テンプレート", "PDF印刷"]}
+  author=""
+  class="min-h-screen bg-stone-100 p-4 print:bg-white print:p-0"
+>
+  <PageShell title="履歴書" subtitle="※記入欄はすべて空欄です。必要に応じて内容を追記してください。">
+    <div class="space-y-2">
+      <table class="w-full border-collapse border border-gray-800 text-[10pt]">
+        <tbody>
+          <tr>
+            <td class="w-[18%] border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">氏名</td>
+            <td class="w-[50%] border border-gray-800 px-2 py-1.5"></td>
+            <td rowspan="7" class="w-[24%] border border-gray-800 p-1 align-top">
+              <div class="flex h-[47mm] items-center justify-center border border-dashed border-gray-400 text-[9pt] text-gray-500">
+                写真貼付欄
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">フリガナ</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">生年月日</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">性別</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">現住所</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">電話番号</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">メールアドレス</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="w-full border-collapse border border-gray-800 text-[10pt]">
+        <tbody>
+          <tr>
+            <td class="w-[18%] border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">学歴</td>
+            <td class="border border-gray-800 px-2 py-1.5">
+              <div class="min-h-[15mm]"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">職歴</td>
+            <td class="border border-gray-800 px-2 py-1.5">
+              <div class="min-h-[15mm]"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">免許・資格</td>
+            <td class="border border-gray-800 px-2 py-1.5">
+              <div class="min-h-[12mm]"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">志望の動機</td>
+            <td class="border border-gray-800 px-2 py-1.5">
+              <div class="min-h-[14mm]"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">特記事項</td>
+            <td class="border border-gray-800 px-2 py-1.5">
+              <div class="min-h-[14mm]"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="rounded border border-gray-400 px-3 py-2 text-[8.5pt] text-gray-600">
+        <div class="font-semibold">印刷時の留意点</div>
+        <div class="mt-1">・A4縦で印刷し、余白を含めてそのままご利用ください。</div>
+        <div>・必要に応じて、写真欄・各項目を手書きまたはデジタルで補完してください。</div>
+      </div>
+    </div>
+  </PageShell>
+</Layout>

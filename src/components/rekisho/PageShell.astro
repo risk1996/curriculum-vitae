@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="mx-auto w-full max-w-[210mm] bg-white p-[7mm] text-[10pt] leading-[1.3] text-gray-900 print:p-[0mm]">
+  <div class="mb-3 flex items-start justify-between border-b border-gray-500 pb-1.5">
+    <div>
+      <div class="text-[13pt] font-bold tracking-[0.08em]">{title}</div>
+      {subtitle && <div class="mt-1 text-[8.5pt] text-gray-600">{subtitle}</div>}
+    </div>
+    <div class="text-[8pt] text-gray-500">※A4縦で印刷してください</div>
+  </div>
+
+  <slot />
+</div>
+
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  :global(html) {
+    background: #f3f4f6;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #f3f4f6;
+  }
+
+  @media print {
+    :global(body) {
+      background: white !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    :global(*) {
+      box-shadow: none !important;
+    }
+  }
+</style>

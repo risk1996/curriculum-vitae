@@ -1,0 +1,100 @@
+---
+import PageShell from "~/components/rekisho/PageShell.astro";
+import Layout from "~/layout.astro";
+---
+
+<Layout
+  lang="ja"
+  title="職務経歴書"
+  description="日本の職務経歴書の形式に準拠した空白テンプレート"
+  keywords={["職務経歴書", "日本式職務経歴書", "空白テンプレート", "PDF印刷"]}
+  author=""
+  class="min-h-screen bg-stone-100 p-4 print:bg-white print:p-0"
+>
+  <PageShell title="職務経歴書" subtitle="※職務内容・実績・技術要素はすべて空欄です。必要に応じて記入してください。">
+    <div class="space-y-2">
+      <table class="w-full border-collapse border border-gray-800 text-[10pt]">
+        <tbody>
+          <tr>
+            <td class="w-[18%] border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">氏名</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">フリガナ</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">生年月日</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">現住所</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">連絡先</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">作成日</td>
+            <td class="border border-gray-800 px-2 py-1.5"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="w-full border-collapse border border-gray-800 text-[10pt]">
+        <thead>
+          <tr>
+            <th class="border border-gray-800 bg-gray-50 px-2 py-1.5 text-left font-semibold">期間</th>
+            <th class="border border-gray-800 bg-gray-50 px-2 py-1.5 text-left font-semibold">会社名・所属・役職</th>
+            <th class="border border-gray-800 bg-gray-50 px-2 py-1.5 text-left font-semibold">業務内容・実績</th>
+            <th class="border border-gray-800 bg-gray-50 px-2 py-1.5 text-left font-semibold">使用技術</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+            <td class="border border-gray-800 px-2 py-5 align-top"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="w-full border-collapse border border-gray-800 text-[10pt]">
+        <tbody>
+          <tr>
+            <td class="w-[22%] border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">職務要約</td>
+            <td class="border border-gray-800 px-2 py-1.5">
+              <div class="min-h-[13mm]"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">自己PR</td>
+            <td class="border border-gray-800 px-2 py-1.5">
+              <div class="min-h-[13mm]"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-gray-800 bg-gray-50 px-2 py-1.5 font-semibold">資格・特記事項</td>
+            <td class="border border-gray-800 px-2 py-1.5">
+              <div class="min-h-[13mm]"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </PageShell>
+</Layout>
