@@ -79,7 +79,7 @@ import Layout from "~/layout.astro";
     <section>
       <h2 class="text-lg font-bold">Professional Experience</h2>
       <hr />
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 print:*:break-inside-avoid-page">
         <div>
           <div class="grid grid-cols-[1fr_1fr_1fr]">
             <h3 class="font-bold">Principal Software Engineer</h3>
@@ -113,7 +113,7 @@ import Layout from "~/layout.astro";
             </li>
           </ul>
           <p>
-            <span class="italic">Tech stack:</span>
+            <span class="italic">Tech stack:</span>{" "}
             Java, Spring Boot, Reactor/Webflux, Keycloak, TestNG, Prometheus, Grafana,
             GCP, Docker, Kubernetes, PostgreSQL, MongoDB, Redis.
           </p>
@@ -156,7 +156,7 @@ import Layout from "~/layout.astro";
             </li>
           </ul>
           <p>
-            <span class="italic">Tech stack:</span>
+            <span class="italic">Tech stack:</span>{" "}
             TypeScript, React Native, Redux, Styled System, REST API, Firebase.
           </p>
         </div>
@@ -191,7 +191,7 @@ import Layout from "~/layout.astro";
             </li>
           </ul>
           <p>
-            <span class="italic">Tech stack:</span>
+            <span class="italic">Tech stack:</span>{" "}
             JavaScript, React, Redux, Styled Components, Webpack, REST APIs.
           </p>
         </div>
@@ -222,7 +222,7 @@ import Layout from "~/layout.astro";
             </li>
           </ul>
           <p>
-            <span class="italic">Tech stack:</span>
+            <span class="italic">Tech stack:</span>{" "}
             PHP, Laravel, MySQL, Bootstrap, jQuery.
           </p>
         </div>
@@ -234,35 +234,35 @@ import Layout from "~/layout.astro";
       <hr />
       <ul class="list-disc pl-4">
         <li>
-          <span class="italic">Programming Languages:</span>
+          <span class="italic">Programming Languages:</span>{" "}
           TypeScript, HTML, CSS, Rust, Java, Kotlin, C/C++, Swift.
         </li>
         <li>
-          <span class="italic">Front-End Technologies:</span>
+          <span class="italic">Front-End Technologies:</span>{" "}
           NextJS, React Native, SolidJS, Astro, Tailwind, Styled Components, Vite.
         </li>
         <li>
-          <span class="italic">Back-End Technologies:</span>
+          <span class="italic">Back-End Technologies:</span>{" "}
           Spring Boot, Express, tRPC, Firebase, OAuth, REST, GraphQL.
         </li>
         <li>
-          <span class="italic">Testing:</span>
+          <span class="italic">Testing:</span>{" "}
           Jest, Vitest, React Testing Library, TestNG, Mockito, Locust.
         </li>
         <li>
-          <span class="italic">DevOps:</span>
+          <span class="italic">DevOps:</span>{" "}
           RHEL, CentOS, Ubuntu, GitHub Actions, Docker, GCP, AWS, Pulumi.
         </li>
         <li>
-          <span class="italic">Databases:</span>
+          <span class="italic">Databases:</span>{" "}
           PostgreSQL, SQLite, MySQL, MongoDB, Redis.
         </li>
         <li>
-          <span class="italic">Soft Skills:</span>
+          <span class="italic">Soft Skills:</span>{" "}
           Problem Solving, Teamwork, Communication, Time Management, Mentorship.
         </li>
         <li>
-          <span class="italic">Natural Languages:</span>
+          <span class="italic">Natural Languages:</span>{" "}
           Indonesian (native), English (TOEIC 955), Japanese (JLPT N3).
         </li>
       </ul>
@@ -288,11 +288,19 @@ import Layout from "~/layout.astro";
   @media print {
     @page {
       size: A4;
+      margin: 12mm;
     }
 
     body {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
+      font-size: 11.5pt;
+      line-height: 1.45;
+    }
+
+    h2,
+    hr {
+      break-after: avoid-page;
     }
   }
 </style>
