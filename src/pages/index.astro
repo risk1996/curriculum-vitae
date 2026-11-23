@@ -42,26 +42,24 @@ import Layout from "~/layout.astro";
     "Japanese",
   ]}
   author="William Darian"
-  class="flex flex-col bg-treehouse-50 p-4 text-tapa-900 selection:bg-treehouse-400 md:p-10"
+  class="flex flex-col bg-treehouse-50 p-4 text-tapa-900 selection:bg-treehouse-400 screen:md:p-10 print:px-0"
 >
   <main class="grid max-w-5xl grid-cols-12 gap-4 self-center">
-    <Heading class="col-span-12 md:col-span-8" />
+    <Heading class="col-span-12 md:col-span-8 print:col-span-8" />
 
-    <div class="col-span-12 pt-4 md:col-span-4 md:row-span-2 md:pt-0">
-      <Faceshot class="md:-mt-16" />
+    <div class="col-span-12 pt-4 md:col-span-4 md:row-span-2 md:pt-0 print:col-span-4 print:row-span-2 print:pt-0">
+      <Faceshot class="screen:md:-mt-16 print:-mt-4" />
       <Profile />
-      <Sidebar class="mt-6" />
+      <Sidebar class="mt-6 print:mt-4 print:gap-4" />
     </div>
 
-    <div class="col-span-12 md:col-span-8">
-      <Bio class="md:pt-2" />
+    <div class="col-span-12 md:col-span-8 print:col-span-8">
+      <Bio class="md:pt-2 print:pt-2" />
       <hr class="border-tapa-600" />
       <PersonalDevelopment class="mt-4" />
     </div>
 
-    <div class="break-before-page screen:hidden print:h-4"></div>
-
-    <Projects class="col-span-12 mt-2" />
+    <Projects class="col-span-12 mt-2 print:mt-0 print:break-before-page" />
   </main>
 
   <Footer class="mt-6 print:mt-0" />
@@ -71,12 +69,13 @@ import Layout from "~/layout.astro";
   @media print {
     @page {
       size: A4;
+      margin: 5mm 8mm;
     }
 
     body {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
-      zoom: 77%;
+      zoom: 75%;
     }
   }
 </style>
