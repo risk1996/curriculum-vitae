@@ -1,0 +1,48 @@
+---
+import Document from "~/components/japanese-cv/Document.astro";
+import Page from "~/components/japanese-cv/Page.astro";
+import ShokumuExperience from "~/components/japanese-cv/shokumu/ShokumuExperience.astro";
+import ShokumuHeading from "~/components/japanese-cv/shokumu/ShokumuHeading.astro";
+import ShokumuProse from "~/components/japanese-cv/shokumu/ShokumuProse.astro";
+import ShokumuSection from "~/components/japanese-cv/shokumu/ShokumuSection.astro";
+import ShokumuSkills from "~/components/japanese-cv/shokumu/ShokumuSkills.astro";
+import { documentDate, identity } from "~/data/rireki";
+import {
+  cermati,
+  frisidea,
+  selfPromotion,
+  skills,
+  summary,
+  synspective,
+} from "~/data/shokumu";
+
+const pageStyle = "pr-[41pt] pb-[51pt] pl-[56.5pt]";
+const total = 4;
+---
+
+<Document title={`職務経歴書 | ${identity.nameKanji}`} proportional>
+  <Page class={`${pageStyle} pt-[44pt]`} pageNumber={{ current: 1, total }}>
+    <ShokumuHeading name={identity.nameKanji} asOf={documentDate} />
+    <ShokumuSection title="職務要約">
+      <ShokumuProse paragraphs={summary} class="text-[10pt]" />
+    </ShokumuSection>
+    <ShokumuSection title="職務経歴">
+      <ShokumuExperience {...synspective} />
+    </ShokumuSection>
+  </Page>
+  <Page class={`${pageStyle} pt-[42.5pt]`} pageNumber={{ current: 2, total }}>
+    <ShokumuExperience {...cermati} />
+  </Page>
+  <Page class={`${pageStyle} pt-[58pt]`} pageNumber={{ current: 3, total }}>
+    <ShokumuExperience {...frisidea} />
+    <ShokumuSection title="テクニカルスキル" class="mt-[19pt]">
+      <ShokumuSkills groups={skills} />
+    </ShokumuSection>
+  </Page>
+  <Page class={`${pageStyle} pt-[44pt]`} pageNumber={{ current: 4, total }}>
+    <ShokumuSection title="自己ＰＲ">
+      <ShokumuProse groups={selfPromotion} class="text-[9pt]" />
+      <p class="mt-[24pt] pr-[3pt] text-right text-[9pt]">以上</p>
+    </ShokumuSection>
+  </Page>
+</Document>

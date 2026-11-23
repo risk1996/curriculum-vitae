@@ -1,0 +1,58 @@
+---
+import photo from "~/assets/id-photo.jpg";
+import Document from "~/components/japanese-cv/Document.astro";
+import Page from "~/components/japanese-cv/Page.astro";
+import RirekiBox from "~/components/japanese-cv/rireki/RirekiBox.astro";
+import RirekiHeading from "~/components/japanese-cv/rireki/RirekiHeading.astro";
+import RirekiHistory from "~/components/japanese-cv/rireki/RirekiHistory.astro";
+import RirekiPhoto from "~/components/japanese-cv/rireki/RirekiPhoto.astro";
+import {
+  documentDate,
+  educationAndWork,
+  identity,
+  motivation,
+  preferences,
+  qualifications,
+} from "~/data/rireki";
+
+const historyHeading = "学　歴・職　歴（各別にまとめて書く）";
+---
+
+<Document title={`履歴書 | ${identity.nameKanji}`}>
+  <Page class="pt-[39pt] pr-[34pt] pl-[35.5pt]">
+    <RirekiHeading {...identity} asOf={documentDate}>
+      <RirekiPhoto slot="photo" src={photo} />
+    </RirekiHeading>
+    <div class="mt-[15pt]">
+      <RirekiHistory
+        sections={[
+          { heading: historyHeading, rows: educationAndWork, minRows: 15 },
+        ]}
+        openBottom
+      />
+    </div>
+  </Page>
+  <Page class="pt-[36pt] pr-[34pt] pl-[42.5pt]">
+    <RirekiHistory
+      sections={[
+        { heading: historyHeading, rows: [], minRows: 4 },
+        { heading: "免　許・資　格", rows: qualifications, minRows: 7 },
+      ]}
+    />
+    <div class="mt-3 space-y-3">
+      <RirekiBox
+        title="志望の動機、特技、好きな学科、アピールポイントなど"
+        class="text-justify text-[11pt]"
+      >
+        {motivation.map((paragraph) => (
+          <p class="indent-[1em]">{paragraph}</p>
+        ))}
+      </RirekiBox>
+      <RirekiBox
+        title="本人希望記入欄"
+        note="（特に給料、職種、勤務時間、勤務地、その他についての希望などがあれば記入）"
+        rows={preferences}
+      />
+    </div>
+  </Page>
+</Document>

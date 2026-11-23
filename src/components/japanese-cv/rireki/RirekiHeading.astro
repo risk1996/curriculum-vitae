@@ -1,0 +1,134 @@
+---
+import RirekiDate from "~/components/japanese-cv/rireki/RirekiDate.astro";
+import RirekiPhoto from "~/components/japanese-cv/rireki/RirekiPhoto.astro";
+import { dayjs, japanTimeZone } from "~/helpers/date";
+
+interface Address {
+  furigana?: string;
+  postalCode?: string;
+  address?: string;
+}
+
+interface Props {
+  nameFurigana: string;
+  nameKanji: string;
+  dateOfBirth?: Date;
+  asOf?: Date;
+  gender?: string;
+  currentAddress?: Address;
+  alternateAddress?: Address;
+  phone?: string;
+  email?: string;
+}
+
+const {
+  nameFurigana,
+  nameKanji,
+  dateOfBirth,
+  asOf = new Date(),
+  gender,
+  currentAddress,
+  alternateAddress,
+  phone,
+  email,
+} = Astro.props;
+const birth = dateOfBirth && dayjs(dateOfBirth).tz(japanTimeZone);
+const today = dayjs(asOf).tz(japanTimeZone);
+const age =
+  birth &&
+  today.year() -
+    birth.year() -
+    Number(today.format("MMDD") < birth.format("MMDD"));
+const [emailName, emailDomain] = email?.split(/@(?=[^@]*$)/) ?? [];
+---
+
+<header class="text-[10.5pt] leading-[1.35]">
+  <div class="grid grid-cols-[76%_1fr] items-end">
+    <div>
+      <div class="mb-[6pt] flex min-h-[27pt] items-baseline justify-between pt-[3pt] gap-2 pr-2">
+        <h1 class="text-[19pt] leading-tight font-bold tracking-[0.55em]">
+          履歴書
+        </h1>
+        <RirekiDate date={asOf} />
+      </div>
+      <dl class="border-[1.5pt] border-b-0">
+        <div class="grid min-h-[22pt] grid-cols-[56pt_1fr] items-center border-b border-dotted border-black/60 px-[5pt]">
+          <dt>ふりがな</dt>
+          <dd>{nameFurigana}</dd>
+        </div>
+        <div class="grid min-h-[59pt] grid-cols-[56pt_1fr] items-center px-[5pt]">
+          <dt>氏名</dt>
+          <dd class="text-[16pt]">{nameKanji}</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="mx-auto mb-[2pt]">
+      <slot name="photo">
+        <RirekiPhoto />
+      </slot>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-[76%_1fr] border-[1.5pt] border-t-0">
+    <dl class="grid min-h-[31.5pt] grid-cols-[56pt_1fr] items-center border-y border-black/60 px-[5pt]">
+      <dt class="sr-only">生年月日</dt>
+      <dd class="col-start-2 text-center">
+        {birth && `${birth.format("YYYY 年　M 月　D 日生")}　（満 ${age} 歳）`}
+      </dd>
+    </dl>
+    <dl class="border-t-[1.5pt] border-b border-l border-b-black/65 border-l-black/65 px-[5pt] pt-[2pt]">
+      <dt>性別</dt>
+      <dd class="pl-5">{gender}</dd>
+    </dl>
+
+    <dl class="border-b border-black/60">
+      <div class="grid min-h-[21pt] grid-cols-[56pt_1fr] items-center border-b border-dotted border-black/60 px-[5pt]">
+        <dt>ふりがな</dt>
+        <dd>{currentAddress?.furigana}</dd>
+      </div>
+      <div class="grid min-h-[42pt] grid-cols-[56pt_1fr] px-[5pt] pt-[1pt]">
+        <dt>現住所</dt>
+        <dd>
+          {currentAddress?.postalCode && (
+            <div>〒{currentAddress.postalCode}</div>
+          )}
+          {currentAddress?.address}
+        </dd>
+      </div>
+    </dl>
+    <dl class="border-b border-l border-black/60 px-[5pt] pt-[3pt]">
+      <dt>電話</dt>
+      <dd class="mt-1 pl-5">{phone}</dd>
+    </dl>
+
+    <dl>
+      <div class="grid min-h-[21pt] grid-cols-[56pt_1fr] items-center border-b border-dotted border-black/60 px-[5pt]">
+        <dt>ふりがな</dt>
+        <dd>{alternateAddress?.furigana}</dd>
+      </div>
+      <div class="grid min-h-[41pt] grid-cols-[56pt_1fr] px-[5pt] pt-[1pt]">
+        <dt>連絡先</dt>
+        <dd class="flex flex-wrap justify-between gap-x-2">
+          <div>
+            <div>〒{alternateAddress?.postalCode}</div>
+            {alternateAddress?.address}
+          </div>
+          <span class="text-[9pt]">
+            （現住所以外に連絡を希望する場合のみ記入）
+          </span>
+        </dd>
+      </div>
+    </dl>
+    <dl class="border-l border-black/60 px-[5pt] pt-[3pt]">
+      <dt>メールアドレス</dt>
+      <dd class="mt-1 text-[10pt] wrap-anywhere">
+        {emailName}
+        {emailDomain && (
+          <>
+            <wbr />@{emailDomain}
+          </>
+        )}
+      </dd>
+    </dl>
+  </div>
+</header>

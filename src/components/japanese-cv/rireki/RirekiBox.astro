@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  note?: string;
+  rows?: readonly string[];
+  class?: string;
+}
+
+const { title, note, rows, class: className } = Astro.props;
+---
+
+<section class="border-[1.5pt] text-[10.5pt]">
+  <h2 class="flex min-h-[26pt] flex-wrap items-center gap-x-1 border-b border-black/65 px-[6pt] font-normal">
+    {title}
+    {note && <span class="text-[9pt]">{note}</span>}
+  </h2>
+  {rows ? (
+    <div class="divide-y divide-black/65">
+      {rows.map((row) => (
+        <p class="flex min-h-[27pt] items-center whitespace-pre-wrap px-[6pt]">
+          {row}
+        </p>
+      ))}
+    </div>
+  ) : (
+    <div class:list={["px-[5pt] py-[5pt] leading-[14.25pt]", className]}>
+      <slot />
+    </div>
+  )}
+</section>

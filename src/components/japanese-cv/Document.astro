@@ -1,0 +1,53 @@
+---
+import "@fontsource/noto-serif-jp/400.css";
+import "~/styles/global.css";
+
+interface Props {
+  title: string;
+  proportional?: boolean;
+}
+
+const { title, proportional } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-neutral-100 text-black print:bg-white">
+    <main
+      class:list={[
+        "document mx-auto w-max screen:space-y-4 screen:py-4",
+        { proportional },
+      ]}
+    >
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  .document {
+    font-family: "Noto Serif JP", serif;
+  }
+
+  .proportional {
+    font-family: "Times New Roman", "Noto Serif JP", serif;
+    font-feature-settings: "palt";
+  }
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    .document {
+      width: auto;
+      print-color-adjust: exact;
+    }
+  }
+</style>

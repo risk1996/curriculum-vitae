@@ -1,0 +1,50 @@
+---
+interface Props {
+  groups: readonly {
+    category: string;
+    skills: readonly { name: string; duration: string; description?: string }[];
+  }[];
+}
+
+const { groups } = Astro.props;
+---
+
+<table class="w-full table-fixed border-collapse border-[0.5pt] border-black/70 text-[8.6pt] leading-[11.5pt] [&_td]:border-[0.5pt] [&_td]:border-black/50 [&_td]:px-[5pt] [&_td]:py-[1.2pt] [&_th]:border-[0.5pt] [&_th]:border-black/50 [&_th]:font-normal">
+  <colgroup>
+    <col class="w-[8.5%]" />
+    <col class="w-[17%]" />
+  </colgroup>
+  <colgroup>
+    <col class="w-[10%]" />
+    <col />
+  </colgroup>
+  <thead>
+    <tr class="h-[16pt]">
+      <th scope="colgroup" colspan="2">
+        種類
+      </th>
+      <th scope="col">使用期間</th>
+      <th scope="col">レベル</th>
+    </tr>
+  </thead>
+  {groups.map(({ category, skills }) => (
+    <tbody>
+      {skills.map(({ name, duration, description }, index) => (
+        <tr class="align-top print:break-inside-avoid">
+          {index === 0 && (
+            <th
+              scope="rowgroup"
+              rowspan={skills.length}
+              class="px-1 py-[1.2pt] text-left whitespace-pre-line"
+            >
+              {category}
+            </th>
+          )}
+          <td class="whitespace-pre-line">{name}</td>
+          <td>{duration}</td>
+          <td>{description}</td>
+        </tr>
+      ))}
+    </tbody>
+  ))}
+</table>

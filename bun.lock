@@ -7,6 +7,7 @@
       "dependencies": {
         "@astrojs/check": "^0.9.12",
         "@fontsource-variable/inter": "^5.3.0",
+        "@fontsource/noto-serif-jp": "^5.3.1",
         "@iconify-json/tabler": "^1.2.46",
         "@unpic/placeholder": "^0.1.2",
         "astro": "^7.4.13",
@@ -159,6 +160,8 @@
     "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.2.3", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-ELEBe8PsLvvJ6QMr0zLt8ffvOHW/dc1m3CEzNMg7aJUv3bMaoDtw2TXyDAwkYBuroxxuHEwhRTLJSe5sya547g=="],
 
     "@fontsource-variable/inter": ["@fontsource-variable/inter@5.3.0", "", {}, "sha512-OupL48va4JNofb97w6NYeF9S7W/kHNKM0Er8Dem5nqi4jeOLrVJDoE8tZEpnMJmtkvNbB1EIPPwHcdkF6b1oUA=="],
+
+    "@fontsource/noto-serif-jp": ["@fontsource/noto-serif-jp@5.3.1", "", {}, "sha512-ewMVFXmG1Ip5u1Po1E1M3qqm8hsFqja0/26vkoaNylPXW9pnmEcBREqXxp+Fs03wpmhICE6qyYBN2bbfNtsR9Q=="],
 
     "@iconify-json/tabler": ["@iconify-json/tabler@1.2.46", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-iyEZEUhHV4x1ZbNzzjk3i6Z+MH5h5nXipqKaH7+bUlnoQwzn7fNjWRSqwWtwQ4PYN6WM+N/fLQC/48TRto26qQ=="],
 

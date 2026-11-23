@@ -1,0 +1,18 @@
+---
+import { dayjs, japanTimeZone } from "~/helpers/date";
+
+interface Props {
+  date?: Date | undefined;
+  compact?: boolean;
+}
+
+const { date = new Date(), compact = false } = Astro.props;
+const dateInJapan = dayjs(date).tz(japanTimeZone);
+const format = compact
+  ? "YYYY 年 MM 月 DD 日 現在"
+  : "YYYY 年　 MM 月　 DD 日　現在";
+---
+
+<time datetime={dateInJapan.format("YYYY-MM-DD")} class="whitespace-nowrap">
+  {dateInJapan.format(format)}
+</time>

@@ -1,0 +1,33 @@
+---
+interface Props {
+  class?: string;
+  pageNumber?: { current: number; total: number };
+}
+
+const { class: className, pageNumber } = Astro.props;
+---
+
+<section
+  class:list={[
+    // Allow for differences in how print engines round the A4 page height.
+    "sheet flex min-h-[297mm] w-[210mm] flex-col bg-white screen:shadow-md print:min-h-[296.8mm]",
+    className,
+  ]}
+>
+  <div class="grow">
+    <slot />
+  </div>
+  {pageNumber && (
+    <footer class="pt-1 pr-[3pt] text-right text-[9pt] leading-none">
+      {pageNumber.current}／{pageNumber.total}
+    </footer>
+  )}
+</section>
+
+<style>
+  @media print {
+    .sheet + .sheet {
+      break-before: page;
+    }
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+type Row =
+  | { year?: number | string; month?: number | string; text: string }
+  | { heading: string }
+  | { end: string };
+
+interface Props {
+  sections: readonly {
+    heading?: string;
+    rows: readonly Row[];
+    minRows?: number;
+  }[];
+  openBottom?: boolean;
+}
+
+const { sections, openBottom } = Astro.props;
+---
+
+<table
+  class:list={[
+    "w-full table-fixed border-collapse border-[1.5pt] text-[10.5pt]",
+    openBottom && "border-b-[0.5pt] border-b-black/65",
+  ]}
+>
+  <colgroup>
+    <col class="w-[46pt]" />
+    <col class="w-[28.5pt]" />
+    <col />
+  </colgroup>
+  {sections.map(({ heading, rows, minRows = 0 }) => (
+    <tbody class="[&_tr]:h-[28.35pt] [&_td]:border-[0.5pt] [&_td]:border-black/65 [&_td]:px-[6pt] [&_th]:border-[0.5pt] [&_th]:border-black/65 [&_th]:font-normal">
+      {heading && (
+        <tr>
+          <th scope="col">年</th>
+          <th scope="col">月</th>
+          <th scope="col">{heading}</th>
+        </tr>
+      )}
+      {rows.map((row) => (
+        <tr class="print:break-inside-avoid">
+          <td>{"year" in row && row.year}</td>
+          <td class="text-center">{"month" in row && row.month}</td>
+          {"heading" in row ? (
+            <th scope="row">{row.heading}</th>
+          ) : "end" in row ? (
+            <td class="text-right">{row.end}</td>
+          ) : (
+            <td>{row.text}</td>
+          )}
+        </tr>
+      ))}
+      {Array.from({ length: Math.max(0, minRows - rows.length) }, () => (
+        <tr aria-hidden="true">
+          <td />
+          <td />
+          <td />
+        </tr>
+      ))}
+    </tbody>
+  ))}
+</table>

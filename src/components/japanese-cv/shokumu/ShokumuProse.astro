@@ -1,0 +1,26 @@
+---
+interface Props {
+  paragraphs?: readonly string[];
+  groups?: readonly {
+    title: string;
+    paragraphs: readonly string[];
+  }[];
+  class?: string;
+}
+
+const { paragraphs = [], groups = [], class: className } = Astro.props;
+---
+
+<div class:list={["text-justify leading-[23.25pt]", className]}>
+  {paragraphs.map((paragraph) => (
+    <p class="indent-[0.65em]">{paragraph}</p>
+  ))}
+  {groups.map(({ title, paragraphs }) => (
+    <div class="[&+&]:mt-[23.25pt]">
+      <h3>＜{title}＞</h3>
+      {paragraphs.map((paragraph) => (
+        <p class="indent-[0.65em]">{paragraph}</p>
+      ))}
+    </div>
+  ))}
+</div>
